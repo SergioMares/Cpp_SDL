@@ -8,15 +8,20 @@
 using namespace std;
 
 class Game
-{
+{ 
 public:
 
 	SDL_Window* window = nullptr;
 	SDL_Surface* screenSurface = nullptr;
 	SDL_Surface* octopus;
+	enum { INITIALIZING, WAITING, READY, RESULT } state;
 
 	int init();
 	void run();
 	void clear();
+
+	void showBlack();
+	void showOctopus();
+
 };
 

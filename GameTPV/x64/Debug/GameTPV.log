@@ -1,1 +1,3 @@
-﻿  GameTPV.vcxproj -> C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPV\x64\Debug\GameTPV.exe
+﻿  Game.cpp
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPV\Game.cpp(30,23): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GameTPV.vcxproj -> C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPV\x64\Debug\GameTPV.exe
