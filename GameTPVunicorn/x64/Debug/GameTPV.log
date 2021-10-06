@@ -1,0 +1,3 @@
+﻿  Unicorn.cpp
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPVunicorn\Unicorn.cpp(11,18): warning C4305: 'return': truncation from 'int' to 'bool'
+  GameTPV.vcxproj -> C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPVunicorn\x64\Debug\GameTPV.exe

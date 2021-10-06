@@ -1,0 +1,2 @@
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPV\x64\Debug\GameTPV.exe
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPVunicorn\x64\Debug\GameTPV.exe
