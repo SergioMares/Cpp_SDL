@@ -1,3 +1,2 @@
-﻿  Car.cpp
-C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\Car.cpp(29,21): warning C4101: 'newPosX': unreferenced local variable
+﻿  ViewController.cpp
   CarGame.vcxproj -> C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\bin\CarGamePr1Debug.exe

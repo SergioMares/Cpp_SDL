@@ -11,12 +11,6 @@ Game::Game(string name, int width, int height, int roadLength) {
     this->height = height;
     doExit = false;
     font = new Font("../Images/Monospace.ttf", 12);
-
-    //const new vars
-    bMoveBackward = false;
-    bMoveUp = false;
-    bMoveDown = false;
-    bMoveForward = false;    
 }
 
 void Game::startGame() {
@@ -33,18 +27,7 @@ Game::~Game() {
     cout << "[DEBUG] deleting game" << endl;
 }
 
-void Game::update()
-{        
-    if (bMoveUp && !(car->getY() <= 45))
-        car->moveCar(0, 1);
-    else if (bMoveDown && !(car->getY() >= 295))
-        car->moveCar(0, -1);
-
-    if (bMoveForward)
-        car->moveCar(1, 0);
-    else if (bMoveBackward)
-        car->moveCar(-1, 0);
-
+void Game::update(){
     car->update();
 }
 
@@ -54,38 +37,21 @@ void Game::draw(){
 }
 
 //our definitions
-
-
-//bool control
-void Game::setMovement(int _direction)
+void Game::moveCar(double offsetX, double offsetY)
 {
-    switch (_direction)
+    int actPosX, actPosY, newPosX, newPosY;
+    actPosX = car->getX();
+    actPosY = car->getY();
+
+    if (!(actPosY <= 45))
     {
-    case 8:        
-        bMoveUp = true;        
-        break;
+        newPosX = actPosX - offsetX;
+        newPosY = actPosY - offsetY;
 
-    case 2:
-        bMoveDown = true;
-        break;
-
-    case 4:
-        bMoveBackward = true;
-        break;
-
-    case 6:
-        bMoveForward = true;
-        break;
-
-    case 0:        
-        bMoveUp = false;
-        bMoveDown = false;
-        bMoveForward = false;
-        bMoveBackward = false;
-
-    default:
-        break;
+        car->setPosition(newPosX, newPosY);
     }
+    //Joya Makes down, left & right limits
+
 }
 
 void Game::drawInfo() {

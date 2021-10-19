@@ -22,8 +22,6 @@ private:
     const int MAX_SPEED = 10;
     const int INITIAL_POWER = 3;
 
-    double actualVel;
-
     Point2D<double> pos;
     int w, h;
     Game *game;
@@ -36,10 +34,6 @@ public:
 
     void draw();
     void update();
-
-    //new declarations
-    void moveCar(int dirX, int dirY);
-
     void drawTexture(Texture* texture);
 
     void setDimension(int width, int height);

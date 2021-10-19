@@ -32,15 +32,6 @@ private:
     TextureContainer *textureContainer;
     SDL_Renderer* renderer = nullptr;
     Font *font;
-
-    //new variables
-    bool bMoveUp;
-    bool bMoveDown;
-    bool bMoveForward;
-    bool bMoveBackward;
-
-    
-
 public:
     const unsigned int CAR_WIDTH = 100;
     const unsigned  int CAR_HEIGHT = 50;
@@ -52,8 +43,8 @@ public:
     void update();
     void draw();
 
-    //new declarations   
-    void setMovement(int Direction);
+    //our declarations
+    void moveCar(double offsetX, double offsetY);
 
     void setUserExit();
     bool isUserExit();

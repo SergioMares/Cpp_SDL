@@ -8,7 +8,7 @@
 Car::Car(Game *game){
     this->game = game;
     texture = nullptr;
-    actualVel = 0;
+
 }
 
 void Car::setDimension(int width, int height){
@@ -21,38 +21,7 @@ void  Car::setPosition(double x, double y){
 };
 
 void Car::update() {
-    pos = Point2D<double>(getX() + actualVel, getY());
-}
-
-void Car::moveCar(int _DirX, int _DirY)
-{
-    double actPosY, newPosX, newPosY;    
-    actPosY = getY();
-
-    if (_DirX == 1 && actualVel < MAX_SPEED)
-    {
-        puts("aumento");
-        if (actualVel == 0)
-            actualVel++;
-        else
-            actualVel *= ACCELERATION;
-    }
-    else if (_DirX == -1)
-    {
-        puts("decremento");
-        if (actualVel > 1)
-            actualVel *= DECELERATION;
-        else
-            actualVel = 0;
-    }
-
-
-    cout << actualVel << endl;
-    
-    newPosY = actPosY - (VSPEED * double(_DirY));
-    
-    setPosition(getX(), newPosY);
-
+    pos = Point2D<double>(getX() + 1, getY());
 }
 
 Car::~Car(){};

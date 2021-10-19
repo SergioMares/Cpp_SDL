@@ -52,41 +52,38 @@ void ViewController::handleEvents() {
 
         if (event.type == SDL_KEYDOWN) {
             switch (key)
-            {            
+            {
             case SDLK_UP:
-                game->setMovement(8);
+                game->moveCar(0, 5);
                 break;
-            case SDLK_w:                
-                game->setMovement(8);
+
+            case SDLK_w:
+                game->moveCar(0, 5);
                 break;
 
             case SDLK_DOWN:
-                game->setMovement(2);
+                game->moveCar(0, -5);
                 break;
+
             case SDLK_s:
-                game->setMovement(2);
+                game->moveCar(0, -5);
                 break;
 
-            case SDLK_LEFT:
-                game->setMovement(4);
-                break;
-            case SDLK_a:
-                game->setMovement(4);
-                break;
-
-            case SDLK_RIGHT:
-                game->setMovement(6);
-                break;
-            case SDLK_d:
-                game->setMovement(6);
-                break;
-
-            default:                     
+            default:
                 break;
             }
+
+            /*
+            SDL_Keycode key = event.key.keysym.sym;
+            if (key == SDLK_w)
+                game->moveCar(0, 5);
+            */
         }
-        else if (event.type == SDL_KEYUP)       
-            game->setMovement(0);
+        
+        //Joya makes A, S, & D. 
+
+
+
     }
 }
 
