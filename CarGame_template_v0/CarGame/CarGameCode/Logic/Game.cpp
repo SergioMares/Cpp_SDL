@@ -35,9 +35,10 @@ Game::~Game() {
 
 void Game::update()
 {        
-    if (bMoveUp && !(car->getY() <= 45))
+    cout << font->getSize() / 2 << endl;
+    if (bMoveUp && !(car->getY() <= car->getHeight()))
         car->moveCar(0, 1);
-    else if (bMoveDown && !(car->getY() >= 295))
+    else if (bMoveDown && !(car->getY() >= height - CAR_HEIGHT/2))
         car->moveCar(0, -1);
 
     if (bMoveForward)
