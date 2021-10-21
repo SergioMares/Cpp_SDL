@@ -24,22 +24,26 @@ class Game{
 
 private:
     string name;
+    
     bool doExit;
-    int roadLength;
-    int width, height;
-    Car *car = nullptr;
-
-    TextureContainer *textureContainer;
-    SDL_Renderer* renderer = nullptr;
-    Font *font;
-
-    //new variables
     bool bMoveUp;
     bool bMoveDown;
     bool bMoveForward;
     bool bMoveBackward;
+    
+    int roadLength;
+    int width;
+    int height;    
+    int infoSize;
+    const unsigned int OBSTACLES = 20;
 
-    Rock* rock = nullptr;
+    Car *car = nullptr;    
+
+    TextureContainer *textureContainer;
+    SDL_Renderer* renderer = nullptr;
+    Font *font;
+    
+    vector<Rock*> rocks;
 
 public:
     const unsigned int CAR_WIDTH = 100;
@@ -57,6 +61,7 @@ public:
 
     //new declarations   
     void setMovement(int Direction);
+    bool Collisions(SDL_Rect GO1, SDL_Rect GO2);
 
     void setUserExit();
     bool isUserExit();

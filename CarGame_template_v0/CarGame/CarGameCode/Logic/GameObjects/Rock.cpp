@@ -33,6 +33,7 @@ void Rock::drawTexture(Texture* texture) {
     SDL_Rect c = getCollider();
     SDL_Rect textureBox = { c.x + dX, c.y + dY, c.w, c.h };
     texture->render(textureBox);
+    //Box(textureBox, BLACK).render(game->getRenderer());
 }
 
 

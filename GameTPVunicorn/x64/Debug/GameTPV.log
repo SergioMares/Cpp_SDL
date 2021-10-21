@@ -1,3 +1,9 @@
-﻿  Unicorn.cpp
+﻿  Game.cpp
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPVunicorn\Game.cpp(35,23): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPVunicorn\Game.cpp(68,18): warning C4101: 'reactionTime': unreferenced local variable
+  Main.cpp
+  Unicorn.cpp
 C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPVunicorn\Unicorn.cpp(11,18): warning C4305: 'return': truncation from 'int' to 'bool'
-  GameTPV.vcxproj -> C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPVunicorn\x64\Debug\GameTPV.exe
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPVunicorn\Unicorn.cpp(47,22): error C2065: 'screenSurface': undeclared identifier
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\GameTPVunicorn\Unicorn.cpp(47,54): error C2065: 'screenSurface': undeclared identifier
+  Generating Code...

@@ -26,6 +26,7 @@ private:
 
     Point2D<double> pos;
     int w, h;
+    int actual_power;
     Game *game;
     Texture *texture;
 
@@ -38,18 +39,23 @@ public:
     void update();
 
     //new declarations
-    void moveCar(int dirX, int dirY);
+    void moveCar(int dirX, int dirY);    
 
     void drawTexture(Texture* texture);
 
     void setDimension(int width, int height);
+    void setPosition(double x, double y);
+    void setVelocity(double NewVel);
+    void setPower(int PowerModifier);
 
-    double getX() {return pos.getX();};
-    double getY() {return pos.getY();};
+    double getX() { return pos.getX(); };
+    double getY() { return pos.getY(); };   
     int getWidth() {return w;};
     int getHeight() {return h;};
+    double getVelocity() { return actualVel; };
+    int getPower() { return actual_power; };
 
-    void setPosition(double x, double y);
+
 
     SDL_Rect getCollider();
 };
