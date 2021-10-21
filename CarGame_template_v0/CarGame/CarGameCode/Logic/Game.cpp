@@ -20,9 +20,21 @@ Game::Game(string name, int width, int height, int roadLength) {
 }
 
 void Game::startGame() {
+    //later work: create vector<> of game objects
+    //            çheck memory leaks here
+
     car = new Car(this);
     car->setDimension(CAR_WIDTH, CAR_HEIGHT);
     car->setPosition(car->getWidth(), height/ 2.0);
+
+    rock = new Rock(this);
+
+    unsigned int tempoSize = rand() % ROCK_SIZE + ROCK_RANGE;
+    rock->setDimension(tempoSize, tempoSize);
+
+    unsigned int tempoPos = rand() % roadLength + ROCK_SIZE;
+    cout << tempoPos << endl;
+    rock->setPosition(tempoPos, height / 2.0);
 }
 
 string Game::getGameName() {
@@ -34,8 +46,7 @@ Game::~Game() {
 }
 
 void Game::update()
-{        
-    cout << font->getSize() / 2 << endl;
+{            
     if (bMoveUp && !(car->getY() <= car->getHeight()))
         car->moveCar(0, 1);
     else if (bMoveDown && !(car->getY() >= height - CAR_HEIGHT/2))
@@ -51,6 +62,7 @@ void Game::update()
 
 void Game::draw(){
     car->draw();
+    rock->draw();
     drawInfo();
 }
 

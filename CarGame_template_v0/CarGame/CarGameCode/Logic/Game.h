@@ -15,7 +15,7 @@
 #include "../View/Font.h"
 
 #include "GameObjects/Car.h"
-
+#include "GameObjects/Rock.h"
 
 using namespace std;
 
@@ -39,11 +39,14 @@ private:
     bool bMoveForward;
     bool bMoveBackward;
 
-    
+    Rock* rock = nullptr;
 
 public:
     const unsigned int CAR_WIDTH = 100;
     const unsigned  int CAR_HEIGHT = 50;
+
+    const unsigned int ROCK_SIZE = CAR_HEIGHT;
+    const unsigned int ROCK_RANGE = ROCK_SIZE/2;
 
     Game(string name, int width, int height, int roadLength);
     ~Game();
