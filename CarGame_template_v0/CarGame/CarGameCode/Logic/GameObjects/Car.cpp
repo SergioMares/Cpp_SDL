@@ -8,8 +8,7 @@
 Car::Car(Game *game){
     this->game = game;
     texture = nullptr;
-    actualVel = 0;
-    actual_power = INITIAL_POWER;
+    actualVel = 0;    
 }
 
 void Car::setDimension(int width, int height){
@@ -63,10 +62,7 @@ void Car::moveCar(int _DirX, int _DirY)
 
 }
 
-void Car::setPower(int _PowerMod)
-{
-    actual_power += _PowerMod;
-}
+
 
 Car::~Car(){};
 

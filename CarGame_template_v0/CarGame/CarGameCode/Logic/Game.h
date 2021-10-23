@@ -30,12 +30,16 @@ private:
     bool bMoveDown;
     bool bMoveForward;
     bool bMoveBackward;
+    bool goodEnding;
     
     int roadLength;
     int width;
     int height;    
     int infoSize;
+    int power;
     const unsigned int OBSTACLES = 20;
+
+    
 
     Car *car = nullptr;    
 
@@ -58,10 +62,12 @@ public:
     void startGame();
     void update();
     void draw();
-
-    //new declarations   
+    
     void setMovement(int Direction);
     bool Collisions(SDL_Rect GO1, SDL_Rect GO2);
+    bool modPower(int PowerModifier);
+    
+    enum { Menu, Playing, GameOver } state;  
 
     void setUserExit();
     bool isUserExit();

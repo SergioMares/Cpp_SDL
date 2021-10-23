@@ -18,17 +18,20 @@ Game::Game(string name, int width, int height, int roadLength) {
     bMoveBackward = false;
     bMoveUp = false;
     bMoveDown = false;
-    bMoveForward = false;    
+    bMoveForward = false;        
+    goodEnding = false;
 }
 
 void Game::startGame() {
     //later work: create vector<> of game objects
-    //            çheck memory leaks here
+    //            check memory leaks here      
 
     car = new Car(this);
     car->setDimension(CAR_WIDTH, CAR_HEIGHT);
-    car->setPosition(car->getWidth(), height/ 2.0);
+    car->setPosition(car->getWidth(), height/ 2.0);    
+    power = car->getPower();
 
+    rocks.clear();
     for (size_t i = 0; i < OBSTACLES; i++)
     {        
         rocks.push_back(new Rock(this));
@@ -44,6 +47,7 @@ void Game::startGame() {
 
         a->setPosition(tempoPosX, tempoPosY);
     }
+    
 
     for (size_t i = 0; i < OBSTACLES; i++)
     {
@@ -58,7 +62,7 @@ void Game::startGame() {
                         if (Collisions(rocks[i]->getCollider(), rocks[j]->getCollider()))
                         {
                             rocks[j] = nullptr;
-                            puts("colision");
+                            puts("rock colision btw each other");
                             //break;
                         }
                     }                    
@@ -89,8 +93,7 @@ void Game::update()
     else if (bMoveBackward)
         car->moveCar(-1, 0);
 
-    //check collisions
-
+    //check collisions car-rock
     for (size_t i = 0; i < OBSTACLES; i++)
     {
         if (rocks[i] != nullptr)
@@ -100,17 +103,17 @@ void Game::update()
                 rocks[i] = nullptr;
 
                 car->setVelocity(0);
-                car->setPower(-1);
+                if (modPower(-1))
+                {
+                    goodEnding = false;
+                    state = GameOver;
+                }
+                    
             }
         }
     }
 
     //check if objects out of the window
-    for (auto a : rocks)
-    {
-        
-    }
-
     for (size_t i = 0; i < OBSTACLES; i++)
     {
         if (rocks[i] != nullptr)
@@ -119,6 +122,14 @@ void Game::update()
                 rocks[i] = nullptr;            
         }
     }
+
+    //check for car get to goal
+    if (car->getX() > roadLength)
+    {
+        goodEnding = true;
+        state = GameOver;
+    }
+        
       
     //update GameObjects    
     car->update();
@@ -132,13 +143,17 @@ void Game::update()
 //call everything that has to be rendered
 void Game::draw()
 {
-    car->draw();
-    for (auto a : rocks)
-    {
-        if (a != nullptr)
-            a->draw();
-    }
     drawInfo();
+    if (state == Playing)
+    {
+        car->draw();
+        for (auto a : rocks)
+        {
+            if (a != nullptr)
+                a->draw();
+        }
+    }
+    
 }
 
 //bool movement control
@@ -174,16 +189,51 @@ void Game::setMovement(int _direction)
 }
 
 void Game::drawInfo() {
-    int x = font->getSize() / 2;
-    int y = font->getSize() / 2;
+    switch (state)
+    {
+    case Game::Menu:
+    {        
+        renderText("Welcome to ¡A todo gas!", width/3, height/3);
+        renderText("Record: (soon!)", width / 3, (height / 3) + font->getSize());
+        renderText("Press Space to begin", width / 3, (height / 3) + font->getSize()*2);
+        renderText("Press Esc at any time to close the game", width / 3, (height / 3) + font->getSize()*3);
 
-    SDL_Rect rect = {0, 0, getWindowWidth(),
-                     infoSize};
-    Box(rect, BLACK).render(renderer);
+        break;
+    }
+    case Game::Playing:
+    {
+        int x = font->getSize() / 2;
+        int y = font->getSize() / 2;
 
-    string s = "Pos: " + to_string(int(car->getX())) + " "
-               + to_string(int(car->getY()));
-    renderText(s, x, y);
+        SDL_Rect rect = { 0, 0, getWindowWidth(),
+                         infoSize };
+        Box(rect, BLACK).render(renderer);
+
+        string s = "Pos: " + to_string(int(car->getX())) + " "
+            + to_string(int(car->getY()));
+        renderText(s, x, y);
+
+        break;
+    }
+    case Game::GameOver:
+        if (goodEnding)
+        {
+            renderText("Congratulations!", width / 3, height / 3);
+            renderText("You win!", width / 3, (height / 3) + font->getSize());
+            renderText("Your time: ", width / 3, (height / 3) + font->getSize() * 2);
+            renderText("Press SPACE to play again", width / 3, (height / 3) + font->getSize() * 3);
+        }
+        else
+        {
+            renderText("Oops :(", width / 3, height / 3);
+            renderText("You loose!", width / 3, (height / 3) + font->getSize());
+            renderText("Your time: ", width / 3, (height / 3) + font->getSize() * 2);
+            renderText("Press SPACE to try again", width / 3, (height / 3) + font->getSize() * 3);
+        }
+        break;
+    default:
+        break;
+    }
 }
 
 //check for collisions
@@ -206,6 +256,17 @@ bool Game::Collisions(SDL_Rect _GO1, SDL_Rect _GO2)
         return false;
 
     return true;
+}
+
+bool Game::modPower(int  _PowerModifier)
+{
+    power += _PowerModifier;
+
+    if (power <= 0)
+        return true;
+    else
+        return false;
+
 }
 
 void Game::setUserExit() {

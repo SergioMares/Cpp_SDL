@@ -25,8 +25,7 @@ private:
     double actualVel;
 
     Point2D<double> pos;
-    int w, h;
-    int actual_power;
+    int w, h;    
     Game *game;
     Texture *texture;
 
@@ -45,15 +44,14 @@ public:
 
     void setDimension(int width, int height);
     void setPosition(double x, double y);
-    void setVelocity(double NewVel);
-    void setPower(int PowerModifier);
+    void setVelocity(double NewVel);    
 
     double getX() { return pos.getX(); };
     double getY() { return pos.getY(); };   
     int getWidth() {return w;};
     int getHeight() {return h;};
     double getVelocity() { return actualVel; };
-    int getPower() { return actual_power; };
+    int getPower() { return INITIAL_POWER; };
 
 
 

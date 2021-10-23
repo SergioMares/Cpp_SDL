@@ -17,14 +17,17 @@ ViewController::ViewController(Game *_game) {
 void ViewController::run() {
     uint32_t startTime = 0;
     uint32_t frameTime;
-    game->startGame();
-
+    game->startGame();        
+    game->state = game->Menu;
+    
     while(!game->doQuit()){
         frameTime = SDL_GetTicks() - startTime;
         handleEvents();
         if (frameTime >= frameDuration()) {
+            
             clearBackground();
-            game->update();
+            if (game->state == game->Playing)//avoid move before the game starts
+                game->update();
             game->draw();
             SDL_RenderPresent(renderer);
             startTime = SDL_GetTicks();
@@ -44,7 +47,7 @@ void ViewController::handleEvents() {
     SDL_Event event;
     while (SDL_PollEvent(&event) ){
 
-        if( event.type == SDL_QUIT)
+        if( event.type == SDL_QUIT )
             game->setUserExit();
 
         //Keyboard inputs
@@ -79,6 +82,19 @@ void ViewController::handleEvents() {
                 break;
             case SDLK_d:
                 game->setMovement(6);
+                break;
+
+            case SDLK_SPACE: 
+                if (game->state != game->Playing)
+                {
+                    game->startGame();
+                    game->state = game->Playing;
+                }
+                
+                break;
+
+            case SDLK_ESCAPE:                
+                game->setUserExit();
                 break;
 
             default:                     
