@@ -37,9 +37,11 @@ private:
     int height;    
     int infoSize;
     int power;
-    const unsigned int OBSTACLES = 20;
+    int initTime;
+    int time;
+    int record;
 
-    
+    const unsigned int OBSTACLES = 20;
 
     Car *car = nullptr;    
 

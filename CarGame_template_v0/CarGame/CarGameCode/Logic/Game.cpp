@@ -13,7 +13,8 @@ Game::Game(string name, int width, int height, int roadLength) {
     font = new Font("../Images/Monospace.ttf", 12);
     infoSize = int(font->getSize() * 1.8);
 
-
+    time = 0;
+    record = 0;
     doExit = false;       
     bMoveBackward = false;
     bMoveUp = false;
@@ -30,6 +31,7 @@ void Game::startGame() {
     car->setDimension(CAR_WIDTH, CAR_HEIGHT);
     car->setPosition(car->getWidth(), height/ 2.0);    
     power = car->getPower();
+    initTime = int(SDL_GetTicks());    
 
     rocks.clear();
     for (size_t i = 0; i < OBSTACLES; i++)
@@ -201,33 +203,48 @@ void Game::drawInfo() {
         break;
     }
     case Game::Playing:
-    {
+    {        
         int x = font->getSize() / 2;
         int y = font->getSize() / 2;
+        time = (int(SDL_GetTicks()) - initTime) / 1000;
 
         SDL_Rect rect = { 0, 0, getWindowWidth(),
                          infoSize };
         Box(rect, BLACK).render(renderer);
 
-        string s = "Pos: " + to_string(int(car->getX())) + " "
-            + to_string(int(car->getY()));
+        string s =
+            "   Position: " + to_string(int(car->getX())) + " " + to_string(int(car->getY())) +
+            "   Distance: " + to_string(int(roadLength - car->getX())) +
+            "   Velocity: " + to_string(int(car->getVelocity())) +
+            "   Power: " + to_string(power) +
+            "   Time: " + to_string(time) +
+            "   Obstacles: (soon!)"
+                ;
+        
+        
         renderText(s, x, y);
 
         break;
     }
     case Game::GameOver:
         if (goodEnding)
-        {
+        {            
             renderText("Congratulations!", width / 3, height / 3);
             renderText("You win!", width / 3, (height / 3) + font->getSize());
-            renderText("Your time: ", width / 3, (height / 3) + font->getSize() * 2);
-            renderText("Press SPACE to play again", width / 3, (height / 3) + font->getSize() * 3);
+            renderText("Your time: " + to_string(time), width / 3, (height / 3) + font->getSize() * 2);
+            if (time <= record)
+            {
+                record = time;
+                renderText("!!NEW RECORD!!", width / 3, (height / 3) + font->getSize() * 3);
+            }
+            else
+                renderText("Press SPACE to play again", width / 3, (height / 3) + font->getSize() * 3);
         }
         else
         {
             renderText("Oops :(", width / 3, height / 3);
             renderText("You loose!", width / 3, (height / 3) + font->getSize());
-            renderText("Your time: ", width / 3, (height / 3) + font->getSize() * 2);
+            renderText("Your time: " + to_string(time), width / 3, (height / 3) + font->getSize() * 2);
             renderText("Press SPACE to try again", width / 3, (height / 3) + font->getSize() * 3);
         }
         break;

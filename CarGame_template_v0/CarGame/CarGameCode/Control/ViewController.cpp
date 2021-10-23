@@ -34,7 +34,7 @@ void ViewController::run() {
         }
         else{
             SDL_Delay(frameDuration() - frameTime);
-        }
+        }        
     }
 }
 
