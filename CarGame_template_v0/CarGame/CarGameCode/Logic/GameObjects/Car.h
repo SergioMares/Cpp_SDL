@@ -27,7 +27,7 @@ private:
     Point2D<double> pos;
     int w, h;    
     Game *game;
-    Texture *texture;
+    //Texture *texture;
 
 
 public:

@@ -1,2 +1,3 @@
 ﻿  Game.cpp
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(89,16): warning C4834: discarding return value of function with 'nodiscard' attribute
   CarGame.vcxproj -> C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\bin\CarGamePr1Debug.exe

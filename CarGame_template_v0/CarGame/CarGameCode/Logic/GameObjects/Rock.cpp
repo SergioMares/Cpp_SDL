@@ -3,7 +3,7 @@
 
 Rock::Rock(Game* game) {
     this->game = game;
-    texture = nullptr;
+    //texture = nullptr;
 }
 
 void Rock::setDimension(int width, int height) {
@@ -33,7 +33,9 @@ void Rock::drawTexture(Texture* texture) {
     SDL_Rect c = getCollider();
     SDL_Rect textureBox = { c.x + dX, c.y + dY, c.w, c.h };
     texture->render(textureBox);
-    //Box(textureBox, BLACK).render(game->getRenderer());
+    if (game->getDebug())
+        Box(textureBox, BLACK).render(game->getRenderer());
+        
 }
 
 

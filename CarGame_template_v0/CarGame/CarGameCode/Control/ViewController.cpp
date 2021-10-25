@@ -17,7 +17,7 @@ ViewController::ViewController(Game *_game) {
 void ViewController::run() {
     uint32_t startTime = 0;
     uint32_t frameTime;
-    game->startGame();        
+    //game->startGame();        
     game->state = game->Menu;
     
     while(!game->doQuit()){
@@ -83,6 +83,12 @@ void ViewController::handleEvents() {
             case SDLK_d:
                 game->setMovement(6);
                 break;
+
+            case SDLK_b:
+                if (game->getDebug())                
+                    game->setDebug(false);                
+                else
+                    game->setDebug(true);
 
             case SDLK_SPACE: 
                 if (game->state != game->Playing)

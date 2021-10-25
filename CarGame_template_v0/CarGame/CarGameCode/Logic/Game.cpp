@@ -21,12 +21,14 @@ Game::Game(string name, int width, int height, int roadLength) {
     bMoveDown = false;
     bMoveForward = false;        
     goodEnding = false;
+    debug = false;
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF); // Check Memory Leaks
 }
 
 void Game::startGame() {
     //later work: create vector<> of game objects
     //            check memory leaks here      
-
+    
     car = new Car(this);
     car->setDimension(CAR_WIDTH, CAR_HEIGHT);
     car->setPosition(car->getWidth(), height/ 2.0);    
@@ -79,6 +81,12 @@ string Game::getGameName() {
 }
 
 Game::~Game() {
+    delete font;
+    delete textureContainer;
+    delete car;
+    for (auto a : rocks)
+        delete a;    
+
     cout << "[DEBUG] deleting game" << endl;
 }
 
@@ -284,6 +292,11 @@ bool Game::modPower(int  _PowerModifier)
     else
         return false;
 
+}
+
+void Game::setDebug(bool _DebugStatus)
+{
+    debug = _DebugStatus;
 }
 
 void Game::setUserExit() {

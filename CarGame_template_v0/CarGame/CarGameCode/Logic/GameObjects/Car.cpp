@@ -7,7 +7,7 @@
 
 Car::Car(Game *game){
     this->game = game;
-    texture = nullptr;
+    //texture = nullptr;
     actualVel = 0;    
 }
 
@@ -75,9 +75,18 @@ void Car::drawTexture(Texture *texture) {
     int dX = game->getOrigin().getX();
     int dY = game->getOrigin().getY();
 
+    
+
     SDL_Rect c = getCollider();
     SDL_Rect textureBox = { c.x + dX, c.y + dY, c.w, c.h};
+    SDL_Rect massBox = { getX() +dX-5, getY()-5, 10, 10 };
     texture->render(textureBox);
+    if (game->getDebug())
+    {
+        Box(textureBox, BLACK).render(game->getRenderer());
+        Box(massBox, BLACK).render(game->getRenderer());
+    }
+    cout << getX() << endl;
 }
 
 

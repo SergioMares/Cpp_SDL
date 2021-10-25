@@ -31,6 +31,7 @@ private:
     bool bMoveForward;
     bool bMoveBackward;
     bool goodEnding;
+    bool debug;
     
     int roadLength;
     int width;
@@ -68,6 +69,8 @@ public:
     void setMovement(int Direction);
     bool Collisions(SDL_Rect GO1, SDL_Rect GO2);
     bool modPower(int PowerModifier);
+    bool getDebug() { return debug; };
+    void setDebug(bool DebugState);
     
     enum { Menu, Playing, GameOver } state;  
 
