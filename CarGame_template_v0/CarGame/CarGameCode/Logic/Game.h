@@ -16,6 +16,7 @@
 
 #include "GameObjects/Car.h"
 #include "GameObjects/Rock.h"
+#include "GameObjects/Goal.h"
 
 using namespace std;
 
@@ -44,7 +45,8 @@ private:
 
     const unsigned int OBSTACLES = 20;
 
-    Car *car = nullptr;    
+    Car *car = nullptr;
+    Goal* goal = nullptr;
 
     TextureContainer *textureContainer;
     SDL_Renderer* renderer = nullptr;

@@ -40,6 +40,10 @@ void Game::startGame() {
     {        
         rocks.push_back(new Rock(this));
     }
+
+    goal = new Goal(this);
+    goal->setDimension(50,height);
+    goal->setPosition(roadLength, height / 2.0);
        
     for (auto a : rocks) 
     {        
@@ -84,6 +88,7 @@ Game::~Game() {
     delete font;
     delete textureContainer;
     delete car;
+    delete goal;
     for (auto a : rocks)
         delete a;    
 
@@ -162,6 +167,7 @@ void Game::draw()
             if (a != nullptr)
                 a->draw();
         }
+        goal->draw();
     }
     
 }
