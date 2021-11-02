@@ -1,14 +1,14 @@
-﻿  ViewController.cpp
-  Game.cpp
-  Car.cpp
-C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\Car.cpp(36,21): warning C4101: 'newPosX': variable local sin referencia
-C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\Car.cpp(82,36): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\Car.cpp(82,36): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\Car.cpp(82,46): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\Car.cpp(82,46): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-  Goal.cpp
-  Rock.cpp
-  Main.cpp
-C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Main.cpp(12,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-  Generando código...
-  CarGame.vcxproj -> C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame_template_v0\bin\CarGamePr1Debug.exe
+﻿  Game.cpp
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(41,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(42,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(45,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(103,41): warning C4018: '>=': signed/unsigned mismatch
+  CarGame.vcxproj -> C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\bin\CarGamePr1Debug.exe
