@@ -36,6 +36,11 @@ void GameObject::setDimension(double width, double height)
     h = height;
 }
 
+void GameObject::setDead(bool _dead)
+{
+    isDead = _dead;
+}
+
 SDL_Rect GameObject::getCollider()
 {
     return { int(getX() - getWidth()),

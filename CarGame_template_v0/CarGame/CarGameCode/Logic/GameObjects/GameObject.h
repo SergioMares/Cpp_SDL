@@ -13,6 +13,7 @@ class GameObject : public Collider{
 
     Point2D<double> pos;
     int w, h;
+    bool isDead;
 
 protected:
     Game *game;
@@ -21,7 +22,7 @@ protected:
     void drawTexture(Texture* texture);
 public:
 
-    GameObject(Game *game): game(game){};
+    GameObject(Game* game) : game(game) { isDead = false; };
     virtual ~GameObject(){};
 
     virtual void draw()=0;
@@ -34,12 +35,15 @@ public:
 
     void setPosition(double x, double y);
     void setDimension(double width, double height);
+    void setDead(bool _dead);
 
     int getWidth() {return w;};
     int getHeight() {return h;};
+    int getX() { return pos.getX(); };
+    int getY() { return pos.getY(); };
 
-    int getX() {return pos.getX();};
-    int getY() {return pos.getY();};
+    bool getDead() { return isDead; };
+
     virtual SDL_Rect getCollider();
     virtual SDL_Rect getCenter();
 

@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="CarGameCode\Control\ViewController.cpp" />
     <ClCompile Include="CarGameCode\Logic\Game.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjectContainer.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Car.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\GameObject.cpp" />
     <ClCompile Include="CarGameCode\Main.cpp" />
@@ -23,6 +24,7 @@
   <ItemGroup>
     <ClInclude Include="CarGameCode\Control\ViewController.h" />
     <ClInclude Include="CarGameCode\Logic\Game.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjectContainer.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Car.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Collider.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\GameObject.h" />
