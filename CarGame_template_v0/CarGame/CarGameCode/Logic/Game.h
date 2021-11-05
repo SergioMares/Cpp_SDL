@@ -45,14 +45,16 @@ private:
 
     const unsigned int OBSTACLES = 20;
 
+    //objects
     Car *car = nullptr;
     Goal* goal = nullptr;
+    vector<Rock*> rocks;
 
     TextureContainer *textureContainer;
     SDL_Renderer* renderer = nullptr;
     Font *font;
     
-    vector<Rock*> rocks;
+    
 
 public:
     const unsigned int CAR_WIDTH = 100;

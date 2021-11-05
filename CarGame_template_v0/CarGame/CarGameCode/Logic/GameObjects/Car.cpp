@@ -1,16 +1,5 @@
-//
-// Created by eys on 21/8/21.
-//
-
 #include "Car.h"
 #include "../Game.h"
-
-
-//Car::Car(Game *game){
-//    this->game = game;
-//    //texture = nullptr;
-//    actualVel = 0;    
-//}
 
 void Car::setVelocity(double _newVel)
 {

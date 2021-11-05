@@ -1,4 +1,4 @@
-﻿  Game.cpp
+﻿  Goal.cpp
 C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(41,32): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with
           [
@@ -9,6 +9,4 @@ C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\L
           [
               T=double
           ]
-C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(45,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(103,41): warning C4018: '>=': signed/unsigned mismatch
   CarGame.vcxproj -> C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\bin\CarGamePr1Debug.exe

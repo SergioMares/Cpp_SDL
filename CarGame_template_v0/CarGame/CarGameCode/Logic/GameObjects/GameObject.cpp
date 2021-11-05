@@ -17,7 +17,7 @@ void GameObject::drawTexture(Texture* texture)
         Box(textureBox, BLACK).render(game->getRenderer());
         Box(massBox, BLACK).render(game->getRenderer());
     }
-    cout << getX() << endl;
+    
 }
 
 void GameObject::drawDebug()
