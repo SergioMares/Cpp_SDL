@@ -17,12 +17,12 @@
 #include "GameObjects/Car.h"
 #include "GameObjects/Rock.h"
 #include "GameObjects/Goal.h"
+#include "GameObjectContainer.h"
+#include "GameObjectGenerator.h"
 
 using namespace std;
 
 class Game{
-
-
 private:
     string name;
     
@@ -46,15 +46,14 @@ private:
     const unsigned int OBSTACLES = 20;
 
     //objects
+    GameObjectContainer *goContainer = nullptr;
     Car *car = nullptr;
     Goal* goal = nullptr;
-    vector<Rock*> rocks;
+    //vector<Rock*> rocks;
 
     TextureContainer *textureContainer;
     SDL_Renderer* renderer = nullptr;
     Font *font;
-    
-    
 
 public:
     const unsigned int CAR_WIDTH = 100;
@@ -84,6 +83,11 @@ public:
 
     int getWindowWidth();
     int getWindowHeight();
+    int getRoadLength();
+    int getInfoSize();
+
+    GameObjectContainer* getContainer();
+
 
     Point2D<int> getOrigin();
 

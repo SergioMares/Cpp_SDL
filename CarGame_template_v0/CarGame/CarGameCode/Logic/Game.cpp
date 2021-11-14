@@ -27,19 +27,30 @@ void Game::startGame() {
     car = new Car(this);
     car->setDimension(CAR_WIDTH, CAR_HEIGHT);
     car->setPosition(car->getWidth(), height/ 2.0);    
+
+    goal = new Goal(this);
+    goal->setDimension(50, height);
+    goal->setPosition(roadLength, height / 2.0);
+
+    goContainer = new GameObjectContainer();
+
+    GameObjectGenerator::generate(this, 20);
+    
     power = car->getPower();
     initTime = int(SDL_GetTicks());    
 
-    rocks.clear();
-    for (size_t i = 0; i < OBSTACLES; i++)
+    //rocks.clear(); clean when game ends, put eveyone as dead
+    /*for (size_t i = 0; i < OBSTACLES; i++)
     {        
         rocks.push_back(new Rock(this));
-    }
+    }*/
 
-    goal = new Goal(this);
-    goal->setDimension(50,height);
-    goal->setPosition(roadLength, height / 2.0);
-       
+    /*for (size_t i = 0; i < OBSTACLES; i++)    
+        goContainer->add(new Rock(this));*/
+    
+
+    
+    /*
     for (auto a : rocks) 
     {        
         unsigned int tempoSize = rand() % ROCK_SIZE + ROCK_RANGE;
@@ -49,9 +60,11 @@ void Game::startGame() {
         unsigned int tempoPosY = rand() % (height-ROCK_SIZE) + infoSize;
 
         a->setPosition(tempoPosX, tempoPosY);
-    }
-    
 
+
+    }*/
+    
+    /*
     for (size_t i = 0; i < OBSTACLES; i++)
     {
         if (rocks[i] != nullptr)
@@ -72,7 +85,7 @@ void Game::startGame() {
                 }                
             }            
         }
-    }
+    }*/
 }
 
 string Game::getGameName() {
@@ -84,8 +97,9 @@ Game::~Game() {
     delete textureContainer;
     delete car;
     delete goal;
-    for (auto a : rocks)
-        delete a;    
+    /*for (auto a : rocks)
+        delete a;    */
+    goContainer->~GameObjectContainer();
 
     cout << "[DEBUG] deleting game" << endl;
 }
@@ -104,6 +118,7 @@ void Game::update()
         car->moveCar(-1, 0);
 
     //check collisions car-rock
+    /*
     for (size_t i = 0; i < OBSTACLES; i++)
     {
         if (rocks[i] != nullptr)
@@ -121,16 +136,16 @@ void Game::update()
                     
             }
         }
-    }
+    }*/
 
     //check if objects out of the window
     for (size_t i = 0; i < OBSTACLES; i++)
     {
-        if (rocks[i] != nullptr)
+        /*if (rocks[i] != nullptr)
         {
             if (rocks[i]->getX() < 0)
                 rocks[i] = nullptr;            
-        }
+        }*/
     }
 
     //check for car get to goal
@@ -143,11 +158,12 @@ void Game::update()
       
     //update GameObjects    
     car->update();
-    for (auto a : rocks)
+   /* for (auto a : rocks)
     {
         if (a != nullptr)
             a->update();
-    }        
+    }*/       
+    goContainer->update();
 }
 
 //call everything that has to be rendered
@@ -157,11 +173,12 @@ void Game::draw()
     if (state == Playing)
     {
         car->draw();
-        for (auto a : rocks)
+       /* for (auto a : rocks)
         {
             if (a != nullptr)
                 a->draw();
-        }
+        }*/
+        goContainer->draw();
         goal->draw();
     }
     
@@ -314,6 +331,21 @@ int Game::getWindowWidth(){
 
 int Game::getWindowHeight() {
     return height;
+}
+
+int Game::getRoadLength()
+{
+    return roadLength;
+}
+
+int Game::getInfoSize()
+{
+    return infoSize;
+}
+
+GameObjectContainer* Game::getContainer()
+{
+    return goContainer;
 }
 
 SDL_Renderer *Game::getRenderer() {

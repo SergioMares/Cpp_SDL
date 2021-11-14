@@ -41,6 +41,9 @@
     <ClCompile Include="CarGameCode\Logic\GameObjectContainer.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="CarGameCode\Logic\GameObjectGenerator.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Logic\Game.h" />
@@ -57,5 +60,6 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\Collider.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\GameObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjectContainer.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjectGenerator.h" />
   </ItemGroup>
 </Project>
