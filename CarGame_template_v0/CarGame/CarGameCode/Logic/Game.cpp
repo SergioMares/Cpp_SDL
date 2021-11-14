@@ -33,7 +33,8 @@ void Game::startGame() {
     goal->setPosition(roadLength, height / 2.0);
 
     goContainer = new GameObjectContainer();   
-    GameObjectGenerator::generate(this, 20);
+    GameObjectGenerator::generateRocks(this, 20);
+    GameObjectGenerator::GeneratePU(this, 5);
     
 
     power = car->getPower();

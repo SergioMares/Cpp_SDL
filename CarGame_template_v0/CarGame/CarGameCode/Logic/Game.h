@@ -17,6 +17,7 @@
 #include "GameObjects/Car.h"
 #include "GameObjects/Rock.h"
 #include "GameObjects/Goal.h"
+#include "GameObjects/PowerUp.h"
 #include "GameObjectContainer.h"
 #include "GameObjectGenerator.h"
 

@@ -10,7 +10,7 @@ void GameObjectContainer::update()
 {
 	for (auto obj : gameObjects)
 		obj->update();
-	cout << gameObjects.size() << endl;
+	cout << "total G&B Objects" << gameObjects.size() << endl;
 }
 
 void GameObjectContainer::draw()

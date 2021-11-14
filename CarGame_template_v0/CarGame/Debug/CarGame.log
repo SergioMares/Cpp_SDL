@@ -1,4 +1,4 @@
-﻿  Rock.cpp
+﻿  Game.cpp
 C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(42,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with
           [
@@ -9,4 +9,17 @@ C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\L
           [
               T=double
           ]
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(113,41): warning C4018: '>=': signed/unsigned mismatch
+  PowerUp.cpp
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(42,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(43,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  Generating Code...
   CarGame.vcxproj -> C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\bin\CarGamePr1Debug.exe
