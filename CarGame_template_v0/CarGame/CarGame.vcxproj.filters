@@ -44,6 +44,12 @@
     <ClCompile Include="CarGameCode\Logic\GameObjectGenerator.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="CarGameCode\Logic\GameObjects\BadObject.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="CarGameCode\Logic\GameObjects\GoodObject.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Logic\Game.h" />
@@ -61,5 +67,7 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\GameObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjectContainer.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjectGenerator.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\BadObject.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\GoodObject.h" />
   </ItemGroup>
 </Project>

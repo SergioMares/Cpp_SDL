@@ -15,18 +15,21 @@
     <ClCompile Include="CarGameCode\Logic\Game.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjectContainer.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjectGenerator.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjects\BadObject.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Car.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\GameObject.cpp" />
     <ClCompile Include="CarGameCode\Main.cpp" />
     <ClCompile Include="CarGameCode\View\Texture.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Rock.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Goal.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjects\GoodObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Control\ViewController.h" />
     <ClInclude Include="CarGameCode\Logic\Game.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjectContainer.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjectGenerator.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\BadObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Car.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Collider.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\GameObject.h" />
@@ -38,6 +41,7 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\Rock.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Goal.h" />
     <ClInclude Include="checkML.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\GoodObject.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{28A4C5CD-307A-4FE6-81E4-4CE1F1E49AB4}</ProjectGuid>

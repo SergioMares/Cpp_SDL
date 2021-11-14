@@ -9,6 +9,13 @@ void Car::setVelocity(double _newVel)
 void Car::update() {
     
     setPosition(getX() + actualVel, getY());
+
+    //the car ask who is colliding with him
+
+    vector<Collider*> collisions = game->getContainer()->getCollisions(this);
+
+    for (auto c : collisions)
+        c->receiveCarCollision(this);
 }
 
 

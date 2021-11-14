@@ -10,6 +10,7 @@ void GameObjectContainer::update()
 {
 	for (auto obj : gameObjects)
 		obj->update();
+	cout << gameObjects.size() << endl;
 }
 
 void GameObjectContainer::draw()
@@ -33,8 +34,12 @@ void GameObjectContainer::removeDead()
 {
 	for (auto i = gameObjects.begin(); i != gameObjects.end(); ++i) 
 	{
-		if ((*i)->getDead()) 
+		if ((*i)->getDead())
+		{
+			delete *i;
 			gameObjects.erase(i);
+			break;
+		}
 	}
 }
 

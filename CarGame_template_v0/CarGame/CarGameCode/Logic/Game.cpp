@@ -32,10 +32,10 @@ void Game::startGame() {
     goal->setDimension(50, height);
     goal->setPosition(roadLength, height / 2.0);
 
-    goContainer = new GameObjectContainer();
-
+    goContainer = new GameObjectContainer();   
     GameObjectGenerator::generate(this, 20);
     
+
     power = car->getPower();
     initTime = int(SDL_GetTicks());    
 
@@ -117,6 +117,8 @@ void Game::update()
     else if (bMoveBackward)
         car->moveCar(-1, 0);
 
+
+
     //check collisions car-rock
     /*
     for (size_t i = 0; i < OBSTACLES; i++)
@@ -164,6 +166,7 @@ void Game::update()
             a->update();
     }*/       
     goContainer->update();
+    goContainer->removeDead();    
 }
 
 //call everything that has to be rendered
@@ -244,7 +247,7 @@ void Game::drawInfo() {
             "   Velocity: " + to_string(int(car->getVelocity())) +
             "   Power: " + to_string(power) +
             "   Time: " + to_string(time) +
-            "   Obstacles: (soon!)"
+            "   Obstacles: " + to_string(BadObject::instances);
                 ;
         
         
@@ -317,6 +320,16 @@ void Game::setDebug(bool _DebugStatus)
     debug = _DebugStatus;
 }
 
+bool Game::isRebased(GameObject* go)
+{
+    if (go->getX() < car->getX())
+        return true;
+    else
+        return false;
+}
+
+
+
 void Game::setUserExit() {
     doExit = true;
 }
@@ -350,6 +363,11 @@ GameObjectContainer* Game::getContainer()
 
 SDL_Renderer *Game::getRenderer() {
     return renderer;
+}
+
+void Game::setEnding(bool ending)
+{
+    goodEnding = ending;
 }
 
 void Game::setRenderer(SDL_Renderer *_renderer) {

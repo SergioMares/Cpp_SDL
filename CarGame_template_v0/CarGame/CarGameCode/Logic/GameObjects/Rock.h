@@ -1,16 +1,18 @@
 #ifndef CARGAME_ROCK_H
 #define CARGAME_ROCK_H
 
-#include "GameObject.h"
+#include "BadObject.h"
 
-class Rock : public GameObject{
+class Rock : public BadObject{
 
 public:
-    Rock(Game* game) : GameObject(game) {};
+    Rock(Game* game) : BadObject(game) { onEnter(); };
     ~Rock();
 
     void draw();
     void update();    
+    
+    bool receiveCarCollision(Car* car) override;
 };
 
 

@@ -74,6 +74,7 @@ public:
     bool modPower(int PowerModifier);
     bool getDebug() { return debug; };
     void setDebug(bool DebugState);
+    bool isRebased(GameObject *go);
     
     enum { Menu, Playing, GameOver } state;  
 
@@ -93,6 +94,7 @@ public:
 
     string getGameName();
 
+    void setEnding(bool ending);
     void setRenderer(SDL_Renderer *renderer);
     void loadTextures();
     Texture *getTexture(TextureName name);

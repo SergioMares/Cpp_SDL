@@ -1,4 +1,4 @@
-﻿  GameObjectGenerator.cpp
+﻿  Rock.cpp
 C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(42,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with
           [
