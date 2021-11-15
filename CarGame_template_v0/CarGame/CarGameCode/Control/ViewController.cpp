@@ -13,7 +13,8 @@ ViewController::ViewController(Game *_game) {
     game->setRenderer(renderer);
     game->loadTextures();
     commandFactory = new CommandFactory(game);
-    commandFactory->add(new QuitCommand());
+    commandFactory->add(new QuitStartCommand());
+    commandFactory->add(new MoveCommand());
 }
 
 void ViewController::run() {
@@ -53,69 +54,7 @@ void ViewController::handleEvents() {
         {
             command->execute();
             break;
-        }
-
-        
-
-        //Keyboard inputs
-        SDL_Keycode key = event.key.keysym.sym;
-
-        if (event.type == SDL_KEYDOWN) {
-            switch (key)
-            {            
-            case SDLK_UP:
-                game->setMovement(8);
-                break;
-            case SDLK_w:                
-                game->setMovement(8);
-                break;
-
-            case SDLK_DOWN:
-                game->setMovement(2);
-                break;
-            case SDLK_s:
-                game->setMovement(2);
-                break;
-
-            case SDLK_LEFT:
-                game->setMovement(4);
-                break;
-            case SDLK_a:
-                game->setMovement(4);
-                break;
-
-            case SDLK_RIGHT:
-                game->setMovement(6);
-                break;
-            case SDLK_d:
-                game->setMovement(6);
-                break;
-
-            case SDLK_b:
-                if (game->getDebug())                
-                    game->setDebug(false);                
-                else
-                    game->setDebug(true);
-
-            case SDLK_SPACE: 
-                if (game->state != game->Playing)
-                {
-                    game->startGame();
-                    game->state = game->Playing;
-                }
-                
-                break;
-
-            /*case SDLK_ESCAPE:                
-                game->setUserExit();
-                break;*/
-
-            default:                     
-                break;
-            }
-        }
-        else if (event.type == SDL_KEYUP)       
-            game->setMovement(0);
+        }               
     }
 }
 

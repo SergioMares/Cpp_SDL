@@ -53,7 +53,10 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\PowerUp.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
-    <ClCompile Include="CarGameCode\Control\Commands\QuitCommand.cpp">
+    <ClCompile Include="CarGameCode\Control\Commands\QuitStartCommand.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="CarGameCode\Control\Commands\MoveCommand.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
   </ItemGroup>
@@ -77,7 +80,8 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\GoodObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\PowerUp.h" />
     <ClInclude Include="CarGameCode\Control\Commands\Command.h" />
-    <ClInclude Include="CarGameCode\Control\Commands\QuitCommand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\QuitStartCommand.h" />
     <ClInclude Include="CarGameCode\Control\CommandFactory.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\MoveCommand.h" />
   </ItemGroup>
 </Project>

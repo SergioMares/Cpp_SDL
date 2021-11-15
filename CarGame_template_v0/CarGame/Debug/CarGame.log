@@ -1,4 +1,4 @@
-﻿  QuitCommand.cpp
+﻿  MoveCommand.cpp
 C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(42,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with
           [
@@ -9,4 +9,28 @@ C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\L
           [
               T=double
           ]
+  ViewController.cpp
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(42,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(43,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+  Main.cpp
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(42,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(43,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\CarGame\CarGameCode\Main.cpp(12,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
   CarGame.vcxproj -> C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame_template_v0\bin\CarGamePr1Debug.exe

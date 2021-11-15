@@ -1,11 +1,10 @@
 #ifndef CARGAME_COMMANDFACTORY_H
 #define CARGAME_COMMANDFACTORY_H
 
-#include "Commands/QuitCommand.h"
-//#include "CarGameCode/Control/Commands/MoveCommand.h"
+#include "Commands/QuitStartCommand.h"
+#include "Commands/MoveCommand.h"
 //#include "CarGameCode/Control/Commands/DebugCommand.h"
 //#include "CarGameCode/Control/Commands/HelpCommand.h"
-//#include "CarGameCode/Control/Commands/AccCommand.h"
 #include <vector>
 
 
@@ -37,5 +36,4 @@ public:
         availableCommands.push_back(c);
     }
 };
-
 #endif //CARGAME_COMMANDFACTORY_H

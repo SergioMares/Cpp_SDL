@@ -33,7 +33,7 @@ void Game::startGame() {
     goal->setPosition(roadLength, height / 2.0);
 
     goContainer = new GameObjectContainer();   
-    GameObjectGenerator::generateRocks(this, 20);
+    GameObjectGenerator::generateRocks(this, 1);
     GameObjectGenerator::GeneratePU(this, 5);
     
 
@@ -108,7 +108,7 @@ Game::~Game() {
 void Game::update()
 {
     //car movement Y axis
-    if (bMoveUp && !(car->getY() <= car->getHeight()))
+    if (bMoveUp && !(car->getY() <= CAR_HEIGHT))
         car->moveCar(0, 1);
     else if (bMoveDown && !(car->getY() >= height - CAR_HEIGHT / 2))
         car->moveCar(0, -1);
@@ -184,8 +184,7 @@ void Game::draw()
         }*/
         goContainer->draw();
         goal->draw();
-    }
-    
+    }    
 }
 
 //bool movement control
@@ -283,28 +282,6 @@ void Game::drawInfo() {
     }
 }
 
-//check for collisions
-bool Game::Collisions(SDL_Rect _GO1, SDL_Rect _GO2)
-{
-    Point2D<int> l1, r1, l2, r2;
-    
-    l1 = { _GO1.x, _GO1.y };
-    r1 = { _GO1.x + _GO1.w, _GO1.y + _GO1.h };
-
-    l2 = { _GO2.x, _GO2.y };
-    r2 = { _GO2.x + _GO2.w, _GO2.y + _GO2.h };
-
-    // If one rectangle is on left side of other
-    if (l1.getX() >= r2.getX() || l2.getX() >= r1.getX())
-        return false;
-
-    // If one rectangle is above other
-    if (r1.getY() <= l2.getY() || r2.getY() <= l1.getY())
-        return false;
-
-    return true;
-}
-
 bool Game::modPower(int  _PowerModifier)
 {
     power += _PowerModifier;
@@ -328,8 +305,6 @@ bool Game::isRebased(GameObject* go)
     else
         return false;
 }
-
-
 
 void Game::setUserExit() {
     doExit = true;
