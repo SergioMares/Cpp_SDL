@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CarGameCode\Control\Commands\QuitCommand.cpp" />
     <ClCompile Include="CarGameCode\Control\ViewController.cpp" />
     <ClCompile Include="CarGameCode\Logic\Game.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjectContainer.cpp" />
@@ -26,6 +27,9 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\PowerUp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CarGameCode\Control\CommandFactory.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\Command.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\QuitCommand.h" />
     <ClInclude Include="CarGameCode\Control\ViewController.h" />
     <ClInclude Include="CarGameCode\Logic\Game.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjectContainer.h" />

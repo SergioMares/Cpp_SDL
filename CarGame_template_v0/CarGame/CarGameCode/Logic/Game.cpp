@@ -397,3 +397,7 @@ Texture *Game::getTexture(TextureName name) {
 Point2D<int> Game::getOrigin() {
     return {int(-(car->getX() - car->getWidth())), 0};
 }
+
+/*
+* exe and then esc
+*/

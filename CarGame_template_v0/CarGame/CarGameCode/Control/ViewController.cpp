@@ -4,6 +4,7 @@
 
 #include "ViewController.h"
 
+
 ViewController::ViewController(Game *_game) {
     game = _game;
     cout << "[DEBUG] frame duration: " << frameDuration() << " ms" << endl;
@@ -11,7 +12,8 @@ ViewController::ViewController(Game *_game) {
 
     game->setRenderer(renderer);
     game->loadTextures();
-
+    commandFactory = new CommandFactory(game);
+    commandFactory->add(new QuitCommand());
 }
 
 void ViewController::run() {
@@ -46,9 +48,14 @@ void ViewController::clearBackground() {
 void ViewController::handleEvents() {
     SDL_Event event;
     while (SDL_PollEvent(&event) ){
+        Command* command = commandFactory->getCommand(event);       
+        if (command != nullptr)
+        {
+            command->execute();
+            break;
+        }
 
-        if( event.type == SDL_QUIT )
-            game->setUserExit();
+        
 
         //Keyboard inputs
         SDL_Keycode key = event.key.keysym.sym;
@@ -99,9 +106,9 @@ void ViewController::handleEvents() {
                 
                 break;
 
-            case SDLK_ESCAPE:                
+            /*case SDLK_ESCAPE:                
                 game->setUserExit();
-                break;
+                break;*/
 
             default:                     
                 break;

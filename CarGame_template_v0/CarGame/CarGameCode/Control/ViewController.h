@@ -8,6 +8,7 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "SDL_ttf.h"
+#include "CommandFactory.h"
 
 #include "../Logic/Game.h"
 
@@ -18,6 +19,7 @@ private:
     Game *game;
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;
+    CommandFactory* commandFactory;
 
     void initSDL();
 public:
