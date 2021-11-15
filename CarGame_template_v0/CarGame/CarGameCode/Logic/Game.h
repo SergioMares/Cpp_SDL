@@ -20,6 +20,7 @@
 #include "GameObjects/PowerUp.h"
 #include "GameObjectContainer.h"
 #include "GameObjectGenerator.h"
+#include "../View/Infobar.h"
 
 using namespace std;
 
@@ -54,7 +55,7 @@ private:
 
     TextureContainer *textureContainer;
     SDL_Renderer* renderer = nullptr;
-    Font *font;
+    Font *font;        
 
 public:
     const unsigned int CAR_WIDTH = 100;
@@ -70,8 +71,7 @@ public:
     void update();
     void draw();
     
-    void setMovement(int Direction);
-    bool Collisions(SDL_Rect GO1, SDL_Rect GO2);
+    void setMovement(int Direction);   
     bool modPower(int PowerModifier);
     bool getDebug() { return debug; };
     void setDebug(bool DebugState);
@@ -102,8 +102,7 @@ public:
     SDL_Renderer *getRenderer();
     void renderText(string text, int x, int y, SDL_Color color={0,0,0});
 
-    void drawInfo();
-
+    friend class Infobar;
 };
 
 

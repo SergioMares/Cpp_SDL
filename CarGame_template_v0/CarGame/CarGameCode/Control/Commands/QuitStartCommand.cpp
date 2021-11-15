@@ -25,13 +25,13 @@ bool QuitStartCommand::parse(SDL_Event &event) {
 
 void QuitStartCommand::execute() {
     if (bStart)
-    {
+    {        
         if (game->state != game->Playing)
         {
             game->startGame();
-            game->state = game->Playing;
+            game->state = game->Playing;            
         }
     }
-    else
+    if (bEnd)
         game->setUserExit();
 }

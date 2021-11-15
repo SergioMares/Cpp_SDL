@@ -20,6 +20,7 @@ private:
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;
     CommandFactory* commandFactory;
+    Infobar *info = nullptr;
 
     void initSDL();
 public:

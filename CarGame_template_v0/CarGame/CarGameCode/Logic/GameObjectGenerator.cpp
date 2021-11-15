@@ -2,10 +2,6 @@
 
 Point2D<int> GameObjectGenerator::generateRandomPosition(Game* game, GameObject* o)
 {
-	//old code
-	/*unsigned int tempoPosX = rand() % roadLength + (ROCK_SIZE + CAR_WIDTH);
-	unsigned int tempoPosY = rand() % (height - ROCK_SIZE) + infoSize;*/
-	
 	return Point2D<int>(
 		rand() % game->getRoadLength() + o->getWidth(),
 		rand() % game->getWindowHeight() + game->getInfoSize()
@@ -14,13 +10,6 @@ Point2D<int> GameObjectGenerator::generateRandomPosition(Game* game, GameObject*
 
 void GameObjectGenerator::addInRandomPosition(Game* game, GameObject* o)
 {
-	/*unsigned int tempoSize = rand() % ROCK_SIZE + ROCK_RANGE;
-	a->setDimension(tempoSize, tempoSize);
-
-	unsigned int tempoPosX = rand() % roadLength + (ROCK_SIZE + CAR_WIDTH);
-	unsigned int tempoPosY = rand() % (height - ROCK_SIZE) + infoSize;
-
-	a->setPosition(tempoPosX, tempoPosY);*/	
 	unsigned int tempoSize = rand() % game->ROCK_SIZE + game->ROCK_RANGE;
 	o->setDimension(tempoSize, tempoSize);
 		

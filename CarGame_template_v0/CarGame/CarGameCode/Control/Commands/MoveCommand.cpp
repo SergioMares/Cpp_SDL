@@ -38,13 +38,13 @@ bool MoveCommand::parse(SDL_Event& event) {
 }
 
 void MoveCommand::execute() {
-    if (bUp)
+    if (bUp && !bDown)
         game->setMovement(8);
-    else if (bDown)
+    else if (bDown && !bUp)
         game->setMovement(2);
-    else if (bForward)
+    else if (bForward && !bBackward)
         game->setMovement(6);
-    else if (bBackward)
+    else if (bBackward && !bForward)
         game->setMovement(4);
     else
         game->setMovement(0);

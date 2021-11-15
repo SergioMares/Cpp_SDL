@@ -15,6 +15,7 @@ ViewController::ViewController(Game *_game) {
     commandFactory = new CommandFactory(game);
     commandFactory->add(new QuitStartCommand());
     commandFactory->add(new MoveCommand());
+    info = new Infobar(_game);
 }
 
 void ViewController::run() {
@@ -32,8 +33,10 @@ void ViewController::run() {
             if (game->state == game->Playing)//avoid move before the game starts
                 game->update();
             game->draw();
+            info->drawInfo();
             SDL_RenderPresent(renderer);
             startTime = SDL_GetTicks();
+
         }
         else{
             SDL_Delay(frameDuration() - frameTime);
@@ -85,4 +88,7 @@ ViewController::~ViewController() {
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
+
+    delete commandFactory;
+    delete info;
 }

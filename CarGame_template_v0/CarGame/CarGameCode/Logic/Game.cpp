@@ -23,6 +23,12 @@ Game::Game(string name, int width, int height, int roadLength) {
 
 void Game::startGame() {   
     //check memory leaks here      
+    if (car != nullptr)
+        delete car;
+    if (goal != nullptr)
+        delete goal;
+    if (goContainer != nullptr)
+        delete goContainer;
     
     car = new Car(this);
     car->setDimension(CAR_WIDTH, CAR_HEIGHT);
@@ -30,63 +36,15 @@ void Game::startGame() {
 
     goal = new Goal(this);
     goal->setDimension(50, height);
-    goal->setPosition(roadLength, height / 2.0);
+    goal->setPosition(roadLength, height / 2.0);    
 
     goContainer = new GameObjectContainer();   
-    GameObjectGenerator::generateRocks(this, 1);
+    GameObjectGenerator::generateRocks(this, 20);
     GameObjectGenerator::GeneratePU(this, 5);
     
 
     power = car->getPower();
     initTime = int(SDL_GetTicks());    
-
-    //rocks.clear(); clean when game ends, put eveyone as dead
-    /*for (size_t i = 0; i < OBSTACLES; i++)
-    {        
-        rocks.push_back(new Rock(this));
-    }*/
-
-    /*for (size_t i = 0; i < OBSTACLES; i++)    
-        goContainer->add(new Rock(this));*/
-    
-
-    
-    /*
-    for (auto a : rocks) 
-    {        
-        unsigned int tempoSize = rand() % ROCK_SIZE + ROCK_RANGE;
-        a->setDimension(tempoSize, tempoSize);
-
-        unsigned int tempoPosX = rand() % roadLength + (ROCK_SIZE + CAR_WIDTH);
-        unsigned int tempoPosY = rand() % (height-ROCK_SIZE) + infoSize;
-
-        a->setPosition(tempoPosX, tempoPosY);
-
-
-    }*/
-    
-    /*
-    for (size_t i = 0; i < OBSTACLES; i++)
-    {
-        if (rocks[i] != nullptr)
-        {
-            for (size_t j = 0; j < OBSTACLES; j++)
-            {
-                if (i != j)
-                {
-                    if (rocks[j] != nullptr)
-                    {
-                        if (Collisions(rocks[i]->getCollider(), rocks[j]->getCollider()))
-                        {
-                            rocks[j] = nullptr;
-                            puts("rock colision btw each other");
-                            //break;
-                        }
-                    }                    
-                }                
-            }            
-        }
-    }*/
 }
 
 string Game::getGameName() {
@@ -98,9 +56,7 @@ Game::~Game() {
     delete textureContainer;
     delete car;
     delete goal;
-    /*for (auto a : rocks)
-        delete a;    */
-    goContainer->~GameObjectContainer();
+    delete goContainer;    
 
     cout << "[DEBUG] deleting game" << endl;
 }
@@ -108,48 +64,15 @@ Game::~Game() {
 void Game::update()
 {
     //car movement Y axis
-    if (bMoveUp && !(car->getY() <= CAR_HEIGHT))
+    if (bMoveUp && !(car->getY() <= CAR_HEIGHT) && !bMoveDown)
         car->moveCar(0, 1);
-    else if (bMoveDown && !(car->getY() >= height - CAR_HEIGHT / 2))
+    else if (bMoveDown && !(car->getY() >= height - CAR_HEIGHT / 2) && !bMoveUp)
         car->moveCar(0, -1);
     //car movement X axis
-    if (bMoveForward)
+    if (bMoveForward && !bMoveBackward)
         car->moveCar(1, 0);
-    else if (bMoveBackward)
+    else if (bMoveBackward && !bMoveForward)
         car->moveCar(-1, 0);
-
-
-
-    //check collisions car-rock
-    /*
-    for (size_t i = 0; i < OBSTACLES; i++)
-    {
-        if (rocks[i] != nullptr)
-        {
-            if (Collisions(car->getCollider(), rocks[i]->getCollider()))
-            {
-                rocks[i] = nullptr;
-
-                car->setVelocity(0);
-                if (modPower(-1))
-                {
-                    goodEnding = false;
-                    state = GameOver;
-                }
-                    
-            }
-        }
-    }*/
-
-    //check if objects out of the window
-    for (size_t i = 0; i < OBSTACLES; i++)
-    {
-        /*if (rocks[i] != nullptr)
-        {
-            if (rocks[i]->getX() < 0)
-                rocks[i] = nullptr;            
-        }*/
-    }
 
     //check for car get to goal
     if (car->getX() > roadLength)
@@ -160,28 +83,19 @@ void Game::update()
         
       
     //update GameObjects    
-    car->update();
-   /* for (auto a : rocks)
-    {
-        if (a != nullptr)
-            a->update();
-    }*/       
+    car->update();   
     goContainer->update();
     goContainer->removeDead();    
+    
+
 }
 
 //call everything that has to be rendered
 void Game::draw()
 {
-    drawInfo();
     if (state == Playing)
     {
         car->draw();
-       /* for (auto a : rocks)
-        {
-            if (a != nullptr)
-                a->draw();
-        }*/
         goContainer->draw();
         goal->draw();
     }    
@@ -219,69 +133,6 @@ void Game::setMovement(int _direction)
     }
 }
 
-void Game::drawInfo() {
-    switch (state)
-    {
-    case Game::Menu:
-    {        
-        renderText("Welcome to ¡A todo gas!", width/3, height/3);
-        renderText("Record: (soon!)", width / 3, (height / 3) + font->getSize());
-        renderText("Press Space to begin", width / 3, (height / 3) + font->getSize()*2);
-        renderText("Press Esc at any time to close the game", width / 3, (height / 3) + font->getSize()*3);
-
-        break;
-    }
-    case Game::Playing:
-    {        
-        int x = font->getSize() / 2;
-        int y = font->getSize() / 2;
-        time = (int(SDL_GetTicks()) - initTime) / 1000;
-
-        SDL_Rect rect = { 0, 0, getWindowWidth(),
-                         infoSize };
-        Box(rect, BLACK).render(renderer);
-
-        string s =
-            "   Position: " + to_string(int(car->getX())) + " " + to_string(int(car->getY())) +
-            "   Distance: " + to_string(int(roadLength - car->getX())) +
-            "   Velocity: " + to_string(int(car->getVelocity())) +
-            "   Power: " + to_string(power) +
-            "   Time: " + to_string(time) +
-            "   Obstacles: " + to_string(BadObject::instances);
-                ;
-        
-        
-        renderText(s, x, y);
-
-        break;
-    }
-    case Game::GameOver:
-        if (goodEnding)
-        {            
-            renderText("Congratulations!", width / 3, height / 3);
-            renderText("You win!", width / 3, (height / 3) + font->getSize());
-            renderText("Your time: " + to_string(time), width / 3, (height / 3) + font->getSize() * 2);
-            if (time <= record)
-            {
-                record = time;
-                renderText("!!NEW RECORD!!", width / 3, (height / 3) + font->getSize() * 3);
-            }
-            else
-                renderText("Press SPACE to play again", width / 3, (height / 3) + font->getSize() * 3);
-        }
-        else
-        {
-            renderText("Oops :(", width / 3, height / 3);
-            renderText("You loose!", width / 3, (height / 3) + font->getSize());
-            renderText("Your time: " + to_string(time), width / 3, (height / 3) + font->getSize() * 2);
-            renderText("Press SPACE to try again", width / 3, (height / 3) + font->getSize() * 3);
-        }
-        break;
-    default:
-        break;
-    }
-}
-
 bool Game::modPower(int  _PowerModifier)
 {
     power += _PowerModifier;
@@ -290,7 +141,6 @@ bool Game::modPower(int  _PowerModifier)
         return true;
     else
         return false;
-
 }
 
 void Game::setDebug(bool _DebugStatus)

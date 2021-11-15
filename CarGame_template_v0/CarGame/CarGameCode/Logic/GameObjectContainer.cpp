@@ -3,7 +3,12 @@
 
 GameObjectContainer::~GameObjectContainer()
 {
-	puts("destructor gameObjectContainer pendiente");
+	for (auto obj : gameObjects)
+	{
+		puts("objs in container deleted");
+		delete obj;		
+	}
+	gameObjects.clear();
 }
 
 void GameObjectContainer::update()
@@ -44,31 +49,7 @@ void GameObjectContainer::removeDead()
 }
 
 bool GameObjectContainer::hasCollision(GameObject* g)
-{
-	/*Point2D<int> l1, r1, l2, r2;
-	SDL_Rect	GO1 = g->getCollider(),
-				GO2;
-
-	for (auto obj : gameObjects)
-	{
-		GO2 = obj->getCollider();
-
-		l1 = { GO1.x, GO1.y };
-		r1 = { GO1.x + GO1.w, GO1.y + GO1.h };
-
-		l2 = { GO2.x, GO2.y };
-		r2 = { GO2.x + GO2.w, GO2.y + GO2.h };
-
-		// If one rectangle is on left side of other
-		if (l1.getX() >= r2.getX() || l2.getX() >= r1.getX())
-			return false;
-
-		// If one rectangle is above other
-		if (r1.getY() <= l2.getY() || r2.getY() <= l1.getY())
-			return false;
-
-		return true;
-	}*/
+{	
 	if (getCollisions(g).size() > 0)
 	{
 		return true;
