@@ -1,14 +1,14 @@
 #pragma once
 #include "GoodObject.h"
-class Coin : public GoodObject
+class Turbo : public GoodObject
 {
 public:
-	Coin(Game* game) : GoodObject(game) 
-	{ 
-		onEnter(); 
-		setDimension(20,20);
+	Turbo(Game* game) : GoodObject(game)
+	{
+		onEnter();
+		setDimension(50, 50);
 	};
-	~Coin();
+	~Turbo();
 
 	void draw();
 	void update();

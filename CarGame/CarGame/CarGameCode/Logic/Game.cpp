@@ -39,7 +39,7 @@ void Game::startGame() {
     goal->setPosition(roadLength, height / 2.0);    
 
     goContainer = new GameObjectContainer();   
-    GameObjectGenerator::generateObjects(this, 20, 3, 10);
+    GameObjectGenerator::generateObjects(this, 20, 3, 10, 5);
     //GameObjectGenerator::GeneratePU(this, 5);
     
 
@@ -56,7 +56,9 @@ Game::~Game() {
     delete textureContainer;
     delete car;
     delete goal;
-    delete goContainer;    
+    delete goContainer;
+
+    
 
     cout << "[DEBUG] deleting game" << endl;
 }

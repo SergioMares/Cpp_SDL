@@ -5,6 +5,7 @@
 #include "GameObjects/Rock.h"
 #include "GameObjects/PowerUp.h"
 #include "GameObjects/Coin.h"
+#include "GameObjects/Turbo.h"
 
 class GameObjectGenerator {
     Point2D<int> static generateRandomPosition(Game *game, GameObject *o);
@@ -14,7 +15,8 @@ public:
     static void generateObjects(Game *game, 
         int N_ROCKS = 0,
         int N_PU = 0,
-        int N_COINS = 0)
+        int N_COINS = 0,
+        int N_TURBO = 0)
     {        
         for(int i = 0; i < N_ROCKS; i++)
             addInRandomPosition(game, new Rock(game));
@@ -22,6 +24,8 @@ public:
             addInRandomPosition(game, new PowerUp(game));
         for (int i = 0; i < N_COINS; i++)
             addInRandomPosition(game, new Coin(game));
+        for (int i = 0; i < N_TURBO; i++)
+            addInRandomPosition(game, new Turbo(game));
     }   
 };
 
