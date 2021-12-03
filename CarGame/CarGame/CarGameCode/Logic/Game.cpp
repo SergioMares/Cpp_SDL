@@ -32,7 +32,7 @@ void Game::startGame() {
     
     car = new Car(this);
     car->setDimension(CAR_WIDTH, CAR_HEIGHT);
-    car->setPosition(car->getWidth(), height/ 2.0);    
+    car->setPosition(car->getWidth(), height/ 2.0);
 
     goal = new Goal(this);
     goal->setDimension(50, height);
@@ -83,9 +83,12 @@ void Game::update()
         
       
     //update GameObjects    
-    car->update();   
+    car->update();
+    if (bullet != nullptr)
+        bullet->update(); 
     goContainer->update();
     goContainer->removeDead();    
+    
     
 
 }
@@ -98,6 +101,8 @@ void Game::draw()
         car->draw();
         goContainer->draw();
         goal->draw();
+        if (bullet != nullptr)
+            bullet->draw();
     }    
 }
 
@@ -161,6 +166,17 @@ bool Game::isRebased(GameObject* go)
         return false;
 }
 
+void Game::spawnBullet()
+{
+   bullet = new Bullet(this);
+   bullet->setDimension(20, 5);
+   bullet->setPosition(car->getX(), car->getY());
+
+   /*car = new Car(this);
+   car->setDimension(CAR_WIDTH, CAR_HEIGHT);
+   car->setPosition(car->getWidth(), height / 2.0);*/
+}
+
 void Game::setUserExit() {
     doExit = true;
 }
@@ -185,6 +201,21 @@ int Game::getRoadLength()
 int Game::getInfoSize()
 {
     return infoSize;
+}
+
+int Game::getCoins()
+{
+    return coins;
+}
+
+int Game::getCarX()
+{
+    return car->getX();
+}
+
+int Game::getCarY()
+{
+    return car->getY();
 }
 
 GameObjectContainer* Game::getContainer()

@@ -7,29 +7,25 @@ bool MoveCommand::parse(SDL_Event& event) {
         SDL_Keycode key = event.key.keysym.sym;
         switch (key) {
         case SDLK_UP:
-            bUp = v;
-            return true;
         case SDLK_w:
             bUp = v;
             return true;
+            break;
         case SDLK_DOWN:
-            bDown = v;
-            return true;
         case SDLK_s:
             bDown = v;
             return true;
+            break;
         case SDLK_RIGHT:
-            bForward = v;
-            return true;
         case SDLK_d:
             bForward = v;
             return true;
+            break;
         case SDLK_LEFT:
-            bBackward = v;
-            return true;
         case SDLK_a:
             bBackward = v;
             return true;
+            break;
         default:
             break;
         }

@@ -18,6 +18,12 @@ bool Rock::receiveCarCollision(Car* car)
     return false;
 }
 
+bool Rock::receiveBulletCollision(Bullet* bullet)
+{
+    setDead(true);
+    return true;
+}
+
 Rock::~Rock() 
 { 
     onDelete(); 

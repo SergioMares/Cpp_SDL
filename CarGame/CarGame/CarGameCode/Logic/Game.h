@@ -16,6 +16,7 @@
 
 #include "GameObjects/Car.h"
 #include "GameObjects/Goal.h"
+#include "GameObjects/Bullet.h"
 #include "GameObjectContainer.h"
 #include "GameObjectGenerator.h"
 #include "../View/Infobar.h"
@@ -52,6 +53,7 @@ private:
     GameObjectContainer *goContainer = nullptr;
     Car *car = nullptr;
     Goal* goal = nullptr;
+    Bullet* bullet = nullptr;
     //vector<Rock*> rocks;
 
     TextureContainer *textureContainer;
@@ -81,6 +83,7 @@ public:
     bool getDebug() { return debug; };
     void setDebug(bool DebugState);
     bool isRebased(GameObject *go);
+    void spawnBullet();
     
     enum { Menu, Playing, GameOver } state;  
 
@@ -92,6 +95,9 @@ public:
     int getWindowHeight();
     int getRoadLength();
     int getInfoSize();
+    int getCoins();
+    int getCarX();
+    int getCarY();
 
     GameObjectContainer* getContainer();
 
