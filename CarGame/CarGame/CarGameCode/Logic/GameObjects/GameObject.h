@@ -33,6 +33,8 @@ public:
     virtual void onEnter(){};
     virtual void onDelete(){};
 
+    virtual bool wave(int value = 150) { return false; };
+
     void setPosition(double x, double y);
     void setDimension(double width, double height);
     void setDead(bool _dead);
@@ -48,5 +50,6 @@ public:
     virtual SDL_Rect getCenter();
 
     bool collide(SDL_Rect other);
+
 };
 #endif //CARGAME_GAMEOBJECT_H

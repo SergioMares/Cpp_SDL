@@ -31,6 +31,7 @@
     <ClCompile Include="CarGameCode\Control\Commands\MoveCommand.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Coin.cpp" />
     <ClCompile Include="CarGameCode\Control\Commands\ShootCommmand.cpp" />
+    <ClCompile Include="CarGameCode\Control\Commands\WaveCommand.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Logic\GameObjects\Bullet.h" />
@@ -60,6 +61,7 @@
     <ClInclude Include="CarGameCode\Control\Commands\MoveCommand.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Coin.h" />
     <ClInclude Include="CarGameCode\Control\Commands\ShootCommmand.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\WaveCommand.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{28A4C5CD-307A-4FE6-81E4-4CE1F1E49AB4}</ProjectGuid>

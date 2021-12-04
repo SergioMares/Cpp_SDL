@@ -18,4 +18,6 @@ public:
     void onEnter() override;
     void onDelete() override;
     void static reset();
+
+    bool wave(int value = 150) override;
 };

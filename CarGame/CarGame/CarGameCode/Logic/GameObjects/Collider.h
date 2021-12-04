@@ -13,6 +13,10 @@ public:
     virtual bool receiveBulletCollision(Bullet* bullet) {
         return false;
     };
+    virtual bool wave(int value = 150)
+    {
+        return false;
+    }
 };
 
 #endif //CARGAME_COLLIDER_H

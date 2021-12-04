@@ -20,6 +20,7 @@ public:
     void add(GameObject *gameObject);
     void removeDead();
     bool hasCollision(GameObject *g);
+    vector<GameObject*> getObjects();
     vector<Collider *> getCollisions(GameObject *g);
 };
 

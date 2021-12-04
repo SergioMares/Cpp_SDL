@@ -10,14 +10,17 @@ void Bullet::draw()
 void Bullet::update()
 {
     setPosition(getX() + SPEED, getY());
-
-    //the car ask who is colliding with him
-
     vector<Collider*> collisions = game->getContainer()->getCollisions(this);
 
     for (auto c : collisions)
     {
         if (c->receiveBulletCollision(this))
             setDead(true);
+    }
+
+    //delete after range
+    if (getX() - initialPos >= RANGE)
+    {      
+        setDead(true);
     }
 }

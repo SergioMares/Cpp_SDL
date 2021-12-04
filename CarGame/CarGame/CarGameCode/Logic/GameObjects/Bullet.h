@@ -8,17 +8,20 @@ class Bullet : public GameObject
 
 	const int SPEED = 15;
 	const int RANGE = 700;
+	int initialPos = 0;
 
 public:
 	Bullet(Game* game) : GameObject(game)
 	{
 		setDimension(w, h);		
-		//cout << game->getOrigin().getX() << endl;
+		
 	};
 
 	~Bullet();
 	
 	void draw() override;
 	void update() override;
+
+	void setInitPos(int initPos) { initialPos = initPos; };
 };
 

@@ -74,6 +74,9 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\Turbo.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="CarGameCode\Control\Commands\WaveCommand.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Logic\Game.h" />
@@ -103,5 +106,6 @@
     <ClInclude Include="CarGameCode\Control\Commands\ShootCommmand.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Bullet.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Turbo.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\WaveCommand.h" />
   </ItemGroup>
 </Project>

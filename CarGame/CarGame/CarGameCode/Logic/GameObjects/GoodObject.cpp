@@ -12,7 +12,19 @@ void  GoodObject::onDelete() {
 
 void GoodObject::reset() {
     instances = 0;
-};
+}
+
+bool GoodObject::wave(int value)
+{
+    while (value > 0)
+    {
+        setPosition(getX() - 1, getY());
+        value--;
+    }
+    return false;
+}
+
+
 
 bool GoodObject::toDelete() {
     return !alive || game->isRebased(this);

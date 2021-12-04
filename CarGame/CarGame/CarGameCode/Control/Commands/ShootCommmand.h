@@ -5,7 +5,7 @@ class ShootCommmand : public Command
 	bool bShoot;
 
 public:
-	const string INFO_STRING = "[E/0] to shoot";
+	const string INFO_STRING = "[E] to shoot";
 	ShootCommmand()
 	{
 		info_string = INFO_STRING;

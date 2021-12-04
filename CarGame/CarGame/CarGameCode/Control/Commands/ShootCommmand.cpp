@@ -22,10 +22,9 @@ void ShootCommmand::execute()
     {
         if (game->getCoins() > 0)
         {
-            puts("shoot a bullet");
-            //game->spawnBullet();
             Bullet *bullet = new Bullet(game);
             bullet->setPosition(game->getCarX(), game->getCarY());
+            bullet->setInitPos(game->getCarX());            
             
             game->getContainer()->add(bullet);
             game->modCoins(-1);

@@ -58,6 +58,11 @@ bool GameObjectContainer::hasCollision(GameObject* g)
 		return false;
 }
 
+vector<GameObject*> GameObjectContainer::getObjects()
+{
+	return gameObjects;
+}
+
 vector<Collider*> GameObjectContainer::getCollisions(GameObject* g)
 {
 	Point2D<int> l1, r1, l2, r2;
