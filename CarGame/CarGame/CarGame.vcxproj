@@ -20,6 +20,7 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\BadObject.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Car.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\GameObject.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjects\Turbo.cpp" />
     <ClCompile Include="CarGameCode\Main.cpp" />
     <ClCompile Include="CarGameCode\View\Infobar.cpp" />
     <ClCompile Include="CarGameCode\View\Texture.cpp" />
@@ -44,6 +45,7 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\Car.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Collider.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\GameObject.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\Turbo.h" />
     <ClInclude Include="CarGameCode\Utils\Vector2D.h" />
     <ClInclude Include="CarGameCode\View\Box.h" />
     <ClInclude Include="CarGameCode\View\Font.h" />
