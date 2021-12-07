@@ -39,7 +39,7 @@ void Game::startGame() {
     goal->setPosition(roadLength, height / 2.0);    
 
     goContainer = new GameObjectContainer();   
-    GameObjectGenerator::generateObjects(this, 20, 3, 10, 5);
+    GameObjectGenerator::generateObjects(this, 20, 3, 10, 5, 3, 5);
     //GameObjectGenerator::GeneratePU(this, 5);
     
 

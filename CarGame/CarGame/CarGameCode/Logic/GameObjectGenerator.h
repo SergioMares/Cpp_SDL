@@ -6,6 +6,8 @@
 #include "GameObjects/PowerUp.h"
 #include "GameObjects/Coin.h"
 #include "GameObjects/Turbo.h"
+#include "GameObjects/Superrocks.h"
+#include "GameObjects/Oil.h"
 
 class GameObjectGenerator {
     Point2D<int> static generateRandomPosition(Game *game, GameObject *o);
@@ -16,6 +18,8 @@ public:
         int N_ROCKS = 0,
         int N_PU = 0,
         int N_COINS = 0,
+        int N_SUPERROCKS = 0,
+        int N_OIL = 0,
         int N_TURBO = 0)
     {        
         for(int i = 0; i < N_ROCKS; i++)
@@ -26,6 +30,10 @@ public:
             addInRandomPosition(game, new Coin(game));
         for (int i = 0; i < N_TURBO; i++)
             addInRandomPosition(game, new Turbo(game));
+        for (int i = 0; i < N_SUPERROCKS; i++)
+            addInRandomPosition(game, new Superrock(game));
+        for (int i = 0; i < N_OIL; i++)
+            addInRandomPosition(game, new Oil(game));
     }   
 };
 
