@@ -36,6 +36,7 @@ public:
     int getPower() { return INITIAL_POWER; };
 
     void needforspeed(){ actualVel = 20.0; }
+    void nospeed() { actualVel = 0.7; }
 
 };
 

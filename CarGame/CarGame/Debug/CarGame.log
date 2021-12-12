@@ -1,14 +1,1 @@
-﻿  Oil.cpp
-C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=double
-          ]
-C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=double
-          ]
-C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
-  CarGame.vcxproj -> C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\bin\CarGamePr1Debug.exe
+﻿  CarGame.vcxproj -> C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\bin\CarGamePr1Debug.exe

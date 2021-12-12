@@ -7,7 +7,8 @@ void Oil::update() {
 
 bool Oil::receiveCarCollision(Car* car)
 {
-    car->setVelocity(0);
+    car->nospeed();
+    car->setVelocity(3);
     
 
     return false;
