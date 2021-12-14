@@ -1,1 +1,297 @@
-﻿  CarGame.vcxproj -> C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\bin\CarGamePr1Debug.exe
+﻿  Bullet.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  QuitStartCommand.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  ViewController.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  Game.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.cpp(69,34): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.cpp(71,41): warning C4018: '>=': signed/unsigned mismatch
+  GameObjectGenerator.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  BadObject.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  Car.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\Car.cpp(25,21): warning C4101: 'newPosX': unreferenced local variable
+  GameObject.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.cpp(35,9): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.cpp(36,9): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Turbo.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  Main.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Main.cpp(12,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Infobar.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  Rock.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  Goal.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  GoodObject.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  PowerUp.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  MoveCommand.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  Coin.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  ShootCommmand.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  WaveCommand.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  Superrocks.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  Generating Code...
+  Compiling...
+  Oil.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  Truck.cpp
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(45,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(70,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+  Generating Code...
+  LINK : C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\bin\CarGamePr1Debug.exe not found or not built by the last incremental link; performing full link
+  CarGame.vcxproj -> C:\Users\USUARIO\Documents\GitHub\Cpp_SDL\CarGame\bin\CarGamePr1Debug.exe

@@ -27,7 +27,6 @@ bool Rock::receiveBulletCollision(Bullet* bullet)
 Rock::~Rock() 
 { 
     onDelete(); 
-    puts("petó");
 };
 
 void Rock::draw() {

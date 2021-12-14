@@ -34,6 +34,7 @@
     <ClCompile Include="CarGameCode\Control\Commands\WaveCommand.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Superrocks.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Oil.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjects\Truck.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Logic\GameObjects\Bullet.h" />
@@ -66,6 +67,7 @@
     <ClInclude Include="CarGameCode\Control\Commands\WaveCommand.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Superrocks.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Oil.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjects\Truck.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{28A4C5CD-307A-4FE6-81E4-4CE1F1E49AB4}</ProjectGuid>
