@@ -10,13 +10,10 @@ void Bullet::draw()
 void Bullet::update()
 {
     setPosition(getX() + SPEED, getY());
-    vector<Collider*> collisions = game->getContainer()->getCollisions(this);
+    vector<Collider*> collisions = game->getCollisions(this);
 
     for (auto c : collisions)
-    {
-        if (c->receiveBulletCollision(this))
-            setDead(true);
-    }
+        c->receiveBulletCollision(this);
 
     //delete after range
     if (getX() - initialPos >= RANGE)

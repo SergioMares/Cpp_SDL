@@ -12,7 +12,7 @@ void Car::update() {
 
     //the car ask who is colliding with him
 
-    vector<Collider*> collisions = game->getContainer()->getCollisions(this);
+    vector<Collider*> collisions = game->getCollisions(this);
 
     for (auto c : collisions)
         c->receiveCarCollision(this);

@@ -26,7 +26,7 @@ void ShootCommmand::execute()
             bullet->setPosition(game->getCarX(), game->getCarY());
             bullet->setInitPos(game->getCarX());            
             
-            game->getContainer()->add(bullet);
+            game->addToContainer(bullet);
             game->modCoins(-1);
         }        
     }

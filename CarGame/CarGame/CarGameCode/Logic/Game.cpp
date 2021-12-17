@@ -44,6 +44,7 @@ void Game::startGame() {
     
 
     power = car->getPower();
+    coins = INITIAL_COINS;
     initTime = int(SDL_GetTicks());    
 }
 
@@ -220,9 +221,24 @@ int Game::getCarY()
     return car->getY();
 }
 
-GameObjectContainer* Game::getContainer()
+vector<Collider*> Game::getCollisions(GameObject* g)
 {
-    return goContainer;
+    return goContainer->getCollisions(g);
+}
+
+vector<Collider*> Game::getCollisions()
+{
+    return goContainer->getCollisions();
+}
+
+bool Game::hasCollisions(GameObject* g)
+{
+    return goContainer->hasCollision(g);
+}
+
+void Game::addToContainer(GameObject* g)
+{
+    goContainer->add(g);
 }
 
 SDL_Renderer *Game::getRenderer() {

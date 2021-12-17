@@ -21,6 +21,7 @@ bool Truck::receiveCarCollision(Car* car)
 bool Truck::receiveBulletCollision(Bullet* bullet)
 {
     setDead(true);
+    bullet->setDead(true);
     return true;
 }
 

@@ -22,6 +22,7 @@ public:
     bool hasCollision(GameObject *g);
     vector<GameObject*> getObjects();
     vector<Collider *> getCollisions(GameObject *g);
+    vector<Collider*> getCollisions();
 };
 
 

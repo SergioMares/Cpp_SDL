@@ -40,7 +40,7 @@ private:
     int height;    
     int infoSize;
     int power;
-    int coins = 3;
+    int coins;
     int initTime;
     int time;
     int record;
@@ -48,6 +48,7 @@ private:
     const unsigned int OBSTACLES = 20;
     const unsigned int POWERUPS = 3;
     const unsigned int COINS = 10;
+    const unsigned int INITIAL_COINS = 3;
 
     //objects
     GameObjectContainer *goContainer = nullptr;
@@ -98,8 +99,12 @@ public:
     int getCoins();
     int getCarX();
     int getCarY();
+   
+    vector<Collider*> getCollisions(GameObject* g);
+    vector<Collider*> getCollisions();
+    bool hasCollisions(GameObject* g);
+    void addToContainer(GameObject* g);
 
-    GameObjectContainer* getContainer();
 
 
     Point2D<int> getOrigin();

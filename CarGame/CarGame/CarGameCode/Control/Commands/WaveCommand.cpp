@@ -22,12 +22,8 @@ void WaveCommand::execute()
     {
         if (game->getCoins() > 2)
         {
-            puts("create a wave");
-
-            for (auto objs : game->getContainer()->getObjects())
-            {
-                objs->wave();
-            }
+            for (auto colls : game->getCollisions())
+                colls->wave();
 
             game->modCoins(-3);
         }

@@ -21,8 +21,7 @@ bool Oil::receiveBulletCollision(Bullet* bullet)
 
 Oil::~Oil()
 {
-    onDelete();
-    puts("De el");
+    onDelete();  
 };
 
 void Oil::draw() {

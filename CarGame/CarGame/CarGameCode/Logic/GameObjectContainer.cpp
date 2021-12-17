@@ -93,3 +93,16 @@ vector<Collider*> GameObjectContainer::getCollisions(GameObject* g)
 
 	return colls;
 }
+
+vector<Collider*> GameObjectContainer::getCollisions()
+{
+	vector<Collider*> colls;
+
+	if (!gameObjects.empty())
+	{
+		for (auto obj : gameObjects)					
+			colls.push_back(obj);		
+	}
+
+	return colls;
+}

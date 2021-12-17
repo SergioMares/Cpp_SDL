@@ -21,6 +21,7 @@ bool Rock::receiveCarCollision(Car* car)
 bool Rock::receiveBulletCollision(Bullet* bullet)
 {
     setDead(true);
+    bullet->setDead(true);
     return true;
 }
 

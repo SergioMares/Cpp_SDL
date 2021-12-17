@@ -20,6 +20,7 @@ bool Superrock::receiveCarCollision(Car* car)
 
 bool Superrock::receiveBulletCollision(Bullet* bullet)
 {
+    bullet->setDead(true);
     return true;
 }
 
