@@ -9,7 +9,7 @@ public:
 	{ 
 		setDimension(45,45);
 	};
-	~PowerUp();
+	~PowerUp() = default;
 
 	void draw();
 	void update();

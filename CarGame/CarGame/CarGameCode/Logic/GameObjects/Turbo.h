@@ -7,7 +7,7 @@ public:
 	{
 		setDimension(50, 50);
 	};
-	~Turbo();
+	~Turbo() = default;
 
 	void draw();
 	void update();

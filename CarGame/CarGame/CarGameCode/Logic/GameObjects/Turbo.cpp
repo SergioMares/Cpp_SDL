@@ -1,9 +1,6 @@
 #include "Turbo.h"
 #include "../Game.h"
 
-Turbo::~Turbo()
-{
-}
 
 void Turbo::draw()
 {

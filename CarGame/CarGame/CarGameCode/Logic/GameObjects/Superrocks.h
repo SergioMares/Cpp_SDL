@@ -10,7 +10,7 @@ public:
     {
         setDimension(160, 80);
     };
-    ~Superrock();
+    ~Superrock() = default;
 
     void draw();
     void update();

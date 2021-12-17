@@ -17,7 +17,7 @@ public:
 		
 	};
 
-	~Bullet();
+	~Bullet() = default;
 	
 	void draw() override;
 	void update() override;

@@ -23,7 +23,7 @@ protected:
 public:
 
     GameObject(Game* game) : game(game) { isDead = false; };
-    virtual ~GameObject(){};
+    virtual ~GameObject();
 
     virtual void draw()=0;
     virtual void drawDebug();

@@ -51,7 +51,6 @@ void Car::moveCar(int _DirX, int _DirY)
 
 }
 
-Car::~Car(){};
 
 void Car::draw() {
     drawTexture(game->getTexture(carTexture));

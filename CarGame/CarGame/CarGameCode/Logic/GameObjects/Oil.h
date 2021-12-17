@@ -10,7 +10,7 @@ public:
     {
         setDimension(40, 40);
     };
-    ~Oil();
+    ~Oil() = default;
 
     void draw();
     void update();

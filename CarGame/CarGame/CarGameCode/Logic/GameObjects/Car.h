@@ -22,7 +22,7 @@ private:
 public:
     Car(Game* game) : GameObject(game) {};
 
-    ~Car();
+    ~Car() = default;
 
     void draw();
     void update();

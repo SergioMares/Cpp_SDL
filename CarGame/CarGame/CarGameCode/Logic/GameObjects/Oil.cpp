@@ -16,9 +16,7 @@ bool Oil::receiveBulletCollision(Bullet* bullet)
     return true;
 }
 
-Oil::~Oil()
-{
-};
+
 
 void Oil::draw() {
     drawTexture(game->getTexture(oilTexture));

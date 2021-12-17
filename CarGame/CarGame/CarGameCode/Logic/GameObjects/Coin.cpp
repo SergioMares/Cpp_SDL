@@ -1,9 +1,6 @@
 #include "Coin.h"
 #include "../Game.h"
 
-Coin::~Coin()
-{
-}
 
 void Coin::draw()
 {

@@ -157,8 +157,8 @@ C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObj
           ]
 C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
 C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(72,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.cpp(35,9): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.cpp(36,9): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.cpp(41,9): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.cpp(42,9): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   Goal.cpp
 C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with

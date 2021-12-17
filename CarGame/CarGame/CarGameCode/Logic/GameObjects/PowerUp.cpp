@@ -1,9 +1,6 @@
 #include "PowerUp.h"
 #include "../Game.h"
 
-PowerUp::~PowerUp()
-{
-}
 
 void PowerUp::draw()
 {

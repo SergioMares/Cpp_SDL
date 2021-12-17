@@ -24,9 +24,7 @@ bool Superrock::receiveBulletCollision(Bullet* bullet)
     return true;
 }
 
-Superrock::~Superrock()
-{
-};
+
 
 void Superrock::draw() {
     drawTexture(game->getTexture(superRockTexture));

@@ -25,9 +25,6 @@ bool Rock::receiveBulletCollision(Bullet* bullet)
     return true;
 }
 
-Rock::~Rock() 
-{ 
-};
 
 void Rock::draw() {
     drawTexture(game->getTexture(rockTexture));

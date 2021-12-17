@@ -10,7 +10,7 @@ public:
     {  
         setDimension(50, 50);        
     };
-    ~Rock();
+    ~Rock() = default;
     
     void draw();
     void update();    

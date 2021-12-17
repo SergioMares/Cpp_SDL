@@ -6,7 +6,7 @@ class Goal : public GameObject{
 
 public:
     Goal(Game* game) : GameObject(game) {};
-    ~Goal();
+    ~Goal() = default;
 
     void draw();
     void update();

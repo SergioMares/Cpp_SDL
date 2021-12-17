@@ -20,6 +20,12 @@ void GameObject::drawTexture(Texture* texture)
     
 }
 
+GameObject::~GameObject()
+{
+    game = nullptr;
+    texture = nullptr;
+}
+
 void GameObject::drawDebug()
 {
 	puts("debug jeje");

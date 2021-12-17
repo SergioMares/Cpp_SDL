@@ -7,7 +7,7 @@ public:
 	{ 
 		setDimension(20,20);
 	};
-	~Coin();
+	~Coin() = default;
 
 	void draw();
 	void update();
