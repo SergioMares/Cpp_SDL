@@ -7,7 +7,6 @@ class PowerUp : public GoodObject
 public:
 	PowerUp(Game* game) : GoodObject(game) 
 	{ 
-		onEnter();
 		setDimension(45,45);
 	};
 	~PowerUp();

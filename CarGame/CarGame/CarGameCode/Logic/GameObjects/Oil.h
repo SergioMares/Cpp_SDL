@@ -8,9 +8,7 @@ class Oil : public BadObject {
 public:
     Oil(Game* game) : BadObject(game)
     {
-        onEnter();
         setDimension(40, 40);
-
     };
     ~Oil();
 

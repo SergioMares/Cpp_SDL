@@ -5,7 +5,7 @@ GameObjectContainer::~GameObjectContainer()
 {
 	for (auto obj : gameObjects)
 	{
-		puts("objs in container deleted");
+		obj->onDelete();
 		delete obj;		
 	}
 	gameObjects.clear();
@@ -14,7 +14,11 @@ GameObjectContainer::~GameObjectContainer()
 void GameObjectContainer::update()
 {
 	for (auto obj : gameObjects)
+	{
 		obj->update();
+	}
+		
+		
 	//cout << "total G&B Objects" << gameObjects.size() << endl;
 }
 
@@ -33,6 +37,7 @@ void GameObjectContainer::drawDebug()
 void GameObjectContainer::add(GameObject* gameObject)
 {
 	gameObjects.push_back(gameObject);
+	gameObject->onEnter();
 }
 
 void GameObjectContainer::removeDead()
@@ -41,6 +46,7 @@ void GameObjectContainer::removeDead()
 	{
 		if ((*i)->getDead())
 		{
+			(*i)->onDelete();
 			delete *i;
 			gameObjects.erase(i);
 			break;

@@ -76,8 +76,8 @@ C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObj
           ]
 C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(71,45): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
 C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.h(72,47): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
-C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.cpp(70,34): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.cpp(72,41): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.cpp(68,34): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\Game.cpp(70,41): warning C4018: '>=': signed/unsigned mismatch
   GameObjectGenerator.cpp
 C:\Users\Tato\Documents\GitHub\Cpp_SDL\CarGame\CarGame\CarGameCode\Logic\GameObjects\GameObject.h(44,33): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
           with

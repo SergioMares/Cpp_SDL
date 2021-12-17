@@ -6,9 +6,7 @@ class Truck : public BadObject
 public:
     Truck(Game* game) : BadObject(game)
     {
-        onEnter();
         setDimension(120, 60);
-
     };
     ~Truck();
 

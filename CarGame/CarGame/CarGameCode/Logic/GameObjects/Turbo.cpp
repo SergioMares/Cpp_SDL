@@ -3,7 +3,6 @@
 
 Turbo::~Turbo()
 {
-	onDelete();
 }
 
 void Turbo::draw()
@@ -19,6 +18,6 @@ void Turbo::update()
 bool Turbo::receiveCarCollision(Car* car)
 {
 	setDead(true);
-	car->needforspeed();
+	car->setVelocity(20);
 	return false;
 }

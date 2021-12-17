@@ -3,7 +3,6 @@
 
 PowerUp::~PowerUp()
 {
-	onDelete();
 }
 
 void PowerUp::draw()

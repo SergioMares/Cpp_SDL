@@ -27,7 +27,6 @@ bool Truck::receiveBulletCollision(Bullet* bullet)
 
 Truck::~Truck()
 {
-    onDelete();
 };
 
 void Truck::draw() {

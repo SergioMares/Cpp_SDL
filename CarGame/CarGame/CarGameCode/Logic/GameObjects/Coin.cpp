@@ -3,7 +3,6 @@
 
 Coin::~Coin()
 {
-	onDelete();
 }
 
 void Coin::draw()

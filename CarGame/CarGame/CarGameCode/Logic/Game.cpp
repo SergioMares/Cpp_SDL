@@ -57,15 +57,13 @@ Game::~Game() {
     delete textureContainer;
     delete car;
     delete goal;
-    delete goContainer;
-
-    
-
-    cout << "[DEBUG] deleting game" << endl;
+    delete goContainer; 
 }
 
 void Game::update()
 {
+    cout << BadObject::instances << endl;
+
     //car movement Y axis
     if (bMoveUp && !(car->getY() <= CAR_HEIGHT) && !bMoveDown)
         car->moveCar(0, 1);
@@ -92,7 +90,11 @@ void Game::update()
     goContainer->update();
     goContainer->removeDead();    
     
-    
+    for (auto obj : goContainer->getObjects())
+    {
+        if (isRebased(obj))
+            obj->setDead(true);
+    }
 
 }
 
@@ -163,7 +165,7 @@ void Game::setDebug(bool _DebugStatus)
 
 bool Game::isRebased(GameObject* go)
 {
-    if (go->getX() < car->getX())
+    if (go->getX() < car->getX()-car->getWidth())
         return true;
     else
         return false;

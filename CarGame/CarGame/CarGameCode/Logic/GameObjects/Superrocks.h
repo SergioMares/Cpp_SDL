@@ -8,9 +8,7 @@ class Superrock : public BadObject {
 public:
     Superrock(Game* game) : BadObject(game)
     {
-        onEnter();
         setDimension(160, 80);
-
     };
     ~Superrock();
 

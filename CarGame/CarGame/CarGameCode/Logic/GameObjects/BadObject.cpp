@@ -24,8 +24,4 @@ bool BadObject::wave(int value)
 }
 ;
 
-bool BadObject::toDelete() {
-    return !alive || game->isRebased(this);
-}
-
 int BadObject::instances = 0;

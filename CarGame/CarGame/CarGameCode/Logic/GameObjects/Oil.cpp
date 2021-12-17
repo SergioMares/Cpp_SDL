@@ -6,11 +6,8 @@ void Oil::update() {
 }
 
 bool Oil::receiveCarCollision(Car* car)
-{
-    car->nospeed();
-    car->setVelocity(3);
-    
-
+{   
+    car->setVelocity(1);    
     return false;
 }
 
@@ -21,7 +18,6 @@ bool Oil::receiveBulletCollision(Bullet* bullet)
 
 Oil::~Oil()
 {
-    onDelete();  
 };
 
 void Oil::draw() {

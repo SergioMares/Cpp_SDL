@@ -7,10 +7,8 @@ class Rock : public BadObject{
 
 public:
     Rock(Game* game) : BadObject(game) 
-    { 
-        onEnter();         
-        setDimension(50, 50);
-        
+    {  
+        setDimension(50, 50);        
     };
     ~Rock();
     

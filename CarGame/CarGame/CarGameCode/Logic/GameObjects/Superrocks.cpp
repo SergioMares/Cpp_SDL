@@ -26,8 +26,6 @@ bool Superrock::receiveBulletCollision(Bullet* bullet)
 
 Superrock::~Superrock()
 {
-    onDelete();
-    puts("VOLO");
 };
 
 void Superrock::draw() {
