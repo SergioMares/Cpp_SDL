@@ -17,6 +17,7 @@ ViewController::ViewController(Game *_game) {
     commandFactory->add(new MoveCommand());
     commandFactory->add(new ShootCommmand());
     commandFactory->add(new WaveCommand());
+    commandFactory->add(new CheatCommand());
     info = new Infobar(_game);
 }
 

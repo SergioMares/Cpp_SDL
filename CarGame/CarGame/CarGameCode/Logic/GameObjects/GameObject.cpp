@@ -26,9 +26,19 @@ GameObject::~GameObject()
     texture = nullptr;
 }
 
+void GameObject::draw()
+{
+    drawTexture(texture);
+}
+
 void GameObject::drawDebug()
 {
 	puts("debug jeje");
+}
+
+void GameObject::update()
+{
+    setPosition(getX(), getY());
 }
 
 void GameObject::setPosition(double x, double y)

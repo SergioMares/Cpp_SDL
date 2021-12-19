@@ -25,7 +25,7 @@ public:
     ~Car() = default;
 
     void draw();
-    void update();
+    void update() override;
 
     //new declarations
     void moveCar(int dirX, int dirY);    

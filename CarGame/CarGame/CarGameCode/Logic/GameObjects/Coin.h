@@ -10,7 +10,6 @@ public:
 	~Coin() = default;
 
 	void draw();
-	void update();
 
 	bool receiveCarCollision(Car* car) override;
 };

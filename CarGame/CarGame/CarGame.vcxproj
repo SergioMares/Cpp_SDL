@@ -35,6 +35,7 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\Superrocks.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Oil.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Truck.cpp" />
+    <ClCompile Include="CarGameCode\Control\Commands\CheatCommand.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Logic\GameObjects\Bullet.h" />
@@ -58,6 +59,7 @@
     <ClInclude Include="CarGameCode\View\TextureContainer.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Rock.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Goal.h" />
+    <ClInclude Include="CarGameCode\Control\Commands\CheatCommand.h" />
     <ClInclude Include="checkML.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\GoodObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\PowerUp.h" />

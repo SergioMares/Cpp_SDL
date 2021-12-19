@@ -7,11 +7,6 @@ void Turbo::draw()
 	drawTexture(game->getTexture(turboTexture));
 }
 
-void Turbo::update()
-{
-	setPosition(getX(), getY());
-}
-
 bool Turbo::receiveCarCollision(Car* car)
 {
 	setDead(true);

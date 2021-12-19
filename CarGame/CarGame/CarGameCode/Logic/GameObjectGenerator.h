@@ -13,7 +13,6 @@
 class GameObjectGenerator {
     Point2D<int> static generateRandomPosition(Game *game, GameObject *o);
     void static addInRandomPosition(Game *game, GameObject *o);
-
 public:
     static void generateObjects(Game *game, 
         int N_ROCKS = 0,
@@ -38,7 +37,9 @@ public:
             addInRandomPosition(game, new Oil(game));
         for (int i = 0; i < N_TRUCK; i++)
             addInRandomPosition(game, new Truck(game));
-    }   
+    }
+
+    static void forceAddObject(Game* game, int id);
 };
 
 

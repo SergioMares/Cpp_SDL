@@ -10,7 +10,6 @@ public:
 	~Turbo() = default;
 
 	void draw();
-	void update();
 
 	bool receiveCarCollision(Car* car) override;
 };

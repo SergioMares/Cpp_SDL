@@ -9,5 +9,4 @@ public:
     ~Goal() = default;
 
     void draw();
-    void update();
 };

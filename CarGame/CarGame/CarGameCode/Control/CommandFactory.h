@@ -5,6 +5,7 @@
 #include "Commands/MoveCommand.h"
 #include "Commands/ShootCommmand.h"
 #include "Commands/WaveCommand.h"
+#include "Commands/CheatCommand.h"
 //#include "CarGameCode/Control/Commands/DebugCommand.h"
 //#include "CarGameCode/Control/Commands/HelpCommand.h"
 #include <vector>

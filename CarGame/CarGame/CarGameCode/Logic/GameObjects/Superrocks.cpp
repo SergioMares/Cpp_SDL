@@ -1,10 +1,6 @@
 #include "Superrocks.h"
 #include "../Game.h"
 
-void Superrock::update() {
-    setPosition(getX(), getY());
-}
-
 bool Superrock::receiveCarCollision(Car* car)
 {
     car->setVelocity(0);

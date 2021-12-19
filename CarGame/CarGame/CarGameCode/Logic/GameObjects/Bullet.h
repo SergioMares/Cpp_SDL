@@ -6,15 +6,14 @@ class Bullet : public GameObject
 	const int w = 20; 
 	const int h = 5;
 
-	const int SPEED = 15;
-	const int RANGE = 700;
+	const int SPEED = 30;
+	const int RANGE = 1400;
 	int initialPos = 0;
 
 public:
 	Bullet(Game* game) : GameObject(game)
 	{
-		setDimension(w, h);		
-		
+		setDimension(w, h);				
 	};
 
 	~Bullet() = default;

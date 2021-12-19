@@ -9,7 +9,6 @@ public:
         setDimension(120, 60);
     };
     void draw();
-    void update();
-
+    void update() override;
 };
 

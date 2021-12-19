@@ -1,10 +1,6 @@
 #include "Rock.h"
 #include "../Game.h"
 
-void Rock::update() {
-     setPosition(getX(), getY());
-}
-
 bool Rock::receiveCarCollision(Car* car)
 {
     car->setVelocity(0);

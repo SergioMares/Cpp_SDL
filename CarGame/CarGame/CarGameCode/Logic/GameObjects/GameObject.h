@@ -25,9 +25,9 @@ public:
     GameObject(Game* game) : game(game) { isDead = false; };
     virtual ~GameObject();
 
-    virtual void draw()=0;
+    virtual void draw();
     virtual void drawDebug();
-    virtual void update()=0;
+    virtual void update();
 
     virtual bool toDelete(){return false;}
     virtual void onEnter(){};

@@ -1,10 +1,6 @@
 #include "Oil.h"
 #include "../Game.h"
 
-void Oil::update() {
-    setPosition(getX(), getY());
-}
-
 bool Oil::receiveCarCollision(Car* car)
 {   
     car->setVelocity(1);    
