@@ -22,6 +22,11 @@ bool BadObject::wave(int value)
     }
     return false;
 }
+bool BadObject::blast()
+{
+    setDead(true);
+    return false;
+}
 ;
 
 int BadObject::instances = 0;

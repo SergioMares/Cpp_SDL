@@ -61,9 +61,9 @@ Game::~Game() {
 }
 
 void Game::update()
-{
-    cout << BadObject::instances << endl;
+{        
 
+    //cout << getOrigin().getX() << endl;
     //car movement Y axis
     if (bMoveUp && !(car->getY() <= CAR_HEIGHT) && !bMoveDown)
         car->moveCar(0, 1);
@@ -226,6 +226,11 @@ int Game::getCarY()
 vector<Collider*> Game::getCollisions(GameObject* g)
 {
     return goContainer->getCollisions(g);
+}
+
+vector<Collider*> Game::getCollisions(int x, int y, int range)
+{
+    return goContainer->getCollisions(x, y, range);
 }
 
 vector<Collider*> Game::getCollisions()

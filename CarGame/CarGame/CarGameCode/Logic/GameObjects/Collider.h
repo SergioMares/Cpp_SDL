@@ -17,6 +17,10 @@ public:
     {
         return false;
     }
+    virtual bool blast()
+    {
+        return false;
+    }
 };
 
 #endif //CARGAME_COLLIDER_H

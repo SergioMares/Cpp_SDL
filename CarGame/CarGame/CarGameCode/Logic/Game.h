@@ -101,6 +101,7 @@ public:
     int getCarY();
    
     vector<Collider*> getCollisions(GameObject* g);
+    vector<Collider*> getCollisions(int x, int y, int range);
     vector<Collider*> getCollisions();
     bool hasCollisions(GameObject* g);
     void addToContainer(GameObject* g);

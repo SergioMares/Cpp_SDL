@@ -17,6 +17,7 @@ public:
     void static reset();
 
     bool wave(int value = 150) override;
+    bool blast() override;
 };
 
 

@@ -21,7 +21,8 @@ public:
     void removeDead();
     bool hasCollision(GameObject *g);
     vector<GameObject*> getObjects();
-    vector<Collider *> getCollisions(GameObject *g);
+    vector<Collider*> getCollisions(GameObject *g);
+    vector<Collider*> getCollisions(int x, int y, int range);
     vector<Collider*> getCollisions();
 };
 
